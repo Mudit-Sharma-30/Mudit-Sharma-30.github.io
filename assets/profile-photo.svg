@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Professional portrait placeholder</title>
+  <desc id="desc">A polished abstract portrait placeholder for a personal academic website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbe9e4"/>
+      <stop offset="0.45" stop-color="#b9d0ca"/>
+      <stop offset="1" stop-color="#f0dfc0"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#12201e"/>
+      <stop offset="1" stop-color="#0d6b63"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#bg)"/>
+  <path d="M0 820C140 770 250 780 365 840C485 902 600 884 900 730V1125H0Z" fill="#0d6b63" opacity=".16"/>
+  <circle cx="450" cy="350" r="158" fill="#b9836f"/>
+  <path d="M274 338C288 198 387 126 503 156C618 187 672 276 637 399C581 336 494 323 415 320C354 318 312 325 274 338Z" fill="#17201f"/>
+  <path d="M224 1016C252 778 331 638 450 638C569 638 648 778 676 1016Z" fill="url(#suit)"/>
+  <path d="M365 660L450 770L535 660C511 645 482 638 450 638C418 638 389 645 365 660Z" fill="#f7f6f0"/>
+  <path d="M394 724L450 770L506 724L478 1016H422Z" fill="#bc594a"/>
+  <path d="M200 1016C216 895 253 784 322 710C352 790 393 875 450 1016Z" fill="#111817" opacity=".78"/>
+  <path d="M700 1016C684 895 647 784 578 710C548 790 507 875 450 1016Z" fill="#111817" opacity=".78"/>
+  <circle cx="390" cy="353" r="12" fill="#17201f"/>
+  <circle cx="510" cy="353" r="12" fill="#17201f"/>
+  <path d="M392 448C431 476 469 476 508 448" fill="none" stroke="#7b5147" stroke-width="12" stroke-linecap="round"/>
+  <rect x="84" y="78" width="180" height="16" rx="8" fill="#0d6b63" opacity=".25"/>
+  <rect x="84" y="112" width="126" height="16" rx="8" fill="#bc594a" opacity=".22"/>
+  <rect x="645" y="84" width="150" height="150" rx="8" fill="none" stroke="#ffffff" stroke-width="4" opacity=".34"/>
+</svg>

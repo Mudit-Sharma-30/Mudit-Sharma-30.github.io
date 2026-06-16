@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Collaborator portrait placeholder</title>
+  <desc id="desc">An abstract collaborator portrait placeholder.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d6b63"/>
+      <stop offset="0.52" stop-color="#3e6f91"/>
+      <stop offset="1" stop-color="#bc594a"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="24" fill="#eef2ea"/>
+  <circle cx="120" cy="86" r="46" fill="url(#g)" opacity=".92"/>
+  <path d="M42 220C52 158 80 132 120 132C160 132 188 158 198 220Z" fill="url(#g)" opacity=".86"/>
+  <path d="M34 46H88" stroke="#c4912c" stroke-width="10" stroke-linecap="round" opacity=".6"/>
+  <path d="M152 46H206" stroke="#0d6b63" stroke-width="10" stroke-linecap="round" opacity=".45"/>
+</svg>

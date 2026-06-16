@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery for Mudit Sharma: conferences, research activities, travel, personal interests, and lab events.">
+  <meta name="author" content="Mudit Sharma">
+  <meta property="og:title" content="Gallery | Mudit Sharma">
+  <meta property="og:description" content="Selected moments from research life, conferences, travel, and personal interests.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/research-workspace.png">
+  <title>Gallery | Mudit Sharma</title>
+  <link rel="preload" href="assets/research-workspace.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gallery-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Gallery navigation">
+      <a class="brand" href="index.html#top" aria-label="Go to homepage">
+        <span class="brand-mark">MS</span>
+        <span class="brand-copy">
+          <strong>Mudit Sharma</strong>
+          <small>Gallery</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" data-nav-links>
+        <a href="index.html#about">About</a>
+        <a href="index.html#current-work">Current Work</a>
+        <a href="index.html#archive">Archive</a>
+        <a href="index.html#toolkit">Toolkit</a>
+        <a href="index.html#contact">Contact</a>
+        <details class="nav-more">
+          <summary>More</summary>
+          <div class="nav-more-menu">
+            <a href="index.html#interests">Research Interests</a>
+            <a href="index.html#current-work">Current Work</a>
+            <a href="index.html#timeline">Timeline</a>
+            <a href="index.html#coursework">Coursework</a>
+            <a href="#gallery">Gallery</a>
+            <a href="cv.html">CV</a>
+            <a href="future-profile.html">Future Profile</a>
+          </div>
+        </details>
+      </div>
+
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 3v2.2M12 18.8V21M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M3 12h2.2M18.8 12H21M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"></path>
+          <circle cx="12" cy="12" r="4.3"></circle>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!--
+      PAGE: Gallery
+      Purpose: Keep visual/personal material on its own page so the homepage remains focused.
+      Update: Replace placeholder tiles with real photos, captions, dates, and locations.
+      Add entries: Copy one .gallery-item and set data-gallery to conferences, research, travel, personal, or lab.
+    -->
+    <section class="gallery-hero" id="top" aria-label="Gallery introduction">
+      <div class="gallery-hero-bg" aria-hidden="true"></div>
+      <div class="shell gallery-hero-layout">
+        <div class="reveal">
+          <p class="eyebrow">Gallery</p>
+          <h1>Research life, field notes, travel, and moments beyond the desk.</h1>
+          <p>
+            A visual companion to the academic profile: conferences, research
+            activities, lab events, travel, and personal interests.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#gallery">Browse Gallery</a>
+            <a class="button secondary" href="index.html">Back Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Categories</p>
+          <h2>Browse by context.</h2>
+          <p>
+            Keep this page flexible: it can hold conference photos, research
+            snapshots, travel, hobbies, books, music, lab events, and community moments.
+          </p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Gallery filters">
+          <button class="filter-button active" type="button" data-gallery-filter="all">All</button>
+          <button class="filter-button" type="button" data-gallery-filter="conferences">Conferences</button>
+          <button class="filter-button" type="button" data-gallery-filter="research">Research Activities</button>
+          <button class="filter-button" type="button" data-gallery-filter="travel">Travel</button>
+          <button class="filter-button" type="button" data-gallery-filter="personal">Personal Interests</button>
+          <button class="filter-button" type="button" data-gallery-filter="lab">Lab Events</button>
+        </div>
+
+        <div class="gallery-grid gallery-page-grid">
+          <figure class="gallery-item reveal" data-gallery="research">
+            <img src="assets/research-workspace.png" alt="Research workspace with papers and a laptop" loading="lazy">
+            <figcaption>Research Activities</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder reveal" data-gallery="conferences">
+            <span>Conference</span>
+            <figcaption>[Conference / Workshop]</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder accent reveal" data-gallery="travel">
+            <span>Travel</span>
+            <figcaption>[Research Travel]</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder warm reveal" data-gallery="personal">
+            <span>Personal</span>
+            <figcaption>[Books / Music / Art / Sport]</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder olive reveal" data-gallery="lab">
+            <span>Lab</span>
+            <figcaption>[Lab Event]</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder reveal" data-gallery="research">
+            <span>Methods</span>
+            <figcaption>[Experiment / Simulation Snapshot]</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder accent reveal" data-gallery="conferences">
+            <span>Poster</span>
+            <figcaption>[Poster Session]</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-placeholder warm reveal" data-gallery="personal">
+            <span>Reading</span>
+            <figcaption>[Books / Notes / Ideas]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-layout">
+      <p>&copy; <span data-year></span> Mudit Sharma. Gallery page.</p>
+      <a href="index.html">Back to homepage</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
