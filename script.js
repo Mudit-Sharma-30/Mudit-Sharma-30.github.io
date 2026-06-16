@@ -15,9 +15,10 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const yearSlot = document.querySelector("[data-year]");
 const emailLink = document.querySelector("[data-email]");
 const copyEmailButton = document.querySelector("[data-copy-email]");
-const contactForm = document.querySelector("[data-contact-form]");
-const formNote = document.querySelector("[data-form-note]");
 const parallaxTarget = document.querySelector("[data-parallax]");
+const randomQuote = document.querySelector("[data-random-quote]");
+const randomQuoteButton = document.querySelector("[data-random-quote-button]");
+const scrollProgress = document.querySelector("[data-scroll-progress]");
 
 /*
   FUTURE SECTION ENABLE LIST
@@ -80,8 +81,40 @@ if (yearSlot) {
   yearSlot.textContent = new Date().getFullYear();
 }
 
+if (randomQuote) {
+  const quotes = (randomQuote.dataset.quotes || "")
+    .split("|")
+    .map((quote) => quote.trim())
+    .filter(Boolean);
+
+  const showRandomQuote = () => {
+    if (!quotes.length) {
+      return;
+    }
+
+    const current = randomQuote.textContent?.trim();
+    const options = quotes.filter((quote) => quote !== current);
+    const pool = options.length ? options : quotes;
+    const next = pool[Math.floor(Math.random() * pool.length)];
+    randomQuote.textContent = next;
+  };
+
+  showRandomQuote();
+  randomQuoteButton?.addEventListener("click", showRandomQuote);
+}
+
 const syncHeader = () => {
   header?.classList.toggle("scrolled", window.scrollY > 8);
+};
+
+const syncScrollProgress = () => {
+  if (!scrollProgress) {
+    return;
+  }
+
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? Math.min(window.scrollY / maxScroll, 1) : 0;
+  scrollProgress.style.transform = `scaleX(${progress.toFixed(4)})`;
 };
 
 const syncParallax = () => {
@@ -93,12 +126,56 @@ const syncParallax = () => {
   parallaxTarget.style.setProperty("--parallax-y", `${offset}px`);
 };
 
+const localNavItems = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'))
+  .map((link) => {
+    const section = document.getElementById(link.getAttribute("href").slice(1));
+    return section ? { link, section } : null;
+  })
+  .filter(Boolean);
+
+const syncActiveNav = () => {
+  if (!localNavItems.length) {
+    return;
+  }
+
+  const activationLine = Math.min(window.innerHeight * 0.38, 320);
+  let activeItem = null;
+
+  localNavItems.forEach((item) => {
+    const rect = item.section.getBoundingClientRect();
+
+    if (rect.top <= activationLine && rect.bottom > 96) {
+      activeItem = item;
+    }
+  });
+
+  localNavItems.forEach((item) => {
+    const isActive = Boolean(activeItem && item === activeItem);
+    item.link.classList.toggle("active", isActive);
+
+    if (isActive) {
+      item.link.setAttribute("aria-current", "true");
+    } else {
+      item.link.removeAttribute("aria-current");
+    }
+  });
+};
+
 syncHeader();
+syncScrollProgress();
 syncParallax();
+syncActiveNav();
 window.addEventListener("scroll", () => {
   syncHeader();
+  syncScrollProgress();
   syncParallax();
+  syncActiveNav();
 }, { passive: true });
+
+window.addEventListener("resize", () => {
+  syncScrollProgress();
+  syncActiveNav();
+});
 
 navToggle?.addEventListener("click", () => {
   const isOpen = navLinks?.classList.toggle("open");
@@ -151,6 +228,10 @@ const renderFutureSections = () => {
 renderFutureSections();
 
 const revealElements = document.querySelectorAll(".reveal");
+
+revealElements.forEach((element, index) => {
+  element.style.setProperty("--reveal-delay", `${(index % 7) * 45}ms`);
+});
 
 if (prefersReducedMotion) {
   revealElements.forEach((element) => element.classList.add("is-visible"));
@@ -331,7 +412,21 @@ document.querySelectorAll("[data-explore-card]").forEach((card) => {
   updateExploreGraphic();
 });
 
-document.querySelectorAll("[data-skill-module]").forEach((module) => {
+const spotlightCards = document.querySelectorAll([
+  "[data-skill-module]",
+  ".visual-card",
+  ".publication",
+  ".course-column",
+  ".collaborator-card",
+  ".group-card",
+  ".contact-card",
+  ".research-detail-card",
+  ".early-work-card",
+  ".archive-item",
+  ".gallery-preview-card",
+].join(","));
+
+spotlightCards.forEach((module) => {
   module.addEventListener("pointermove", (event) => {
     const rect = module.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width) * 100;
@@ -369,6 +464,256 @@ document.querySelectorAll(".skill-badge").forEach((badge) => {
   });
 });
 
+document.querySelectorAll("[data-mab-game]").forEach((game) => {
+  const roundSlot = game.querySelector("[data-mab-round]");
+  const rewardSlot = game.querySelector("[data-mab-reward]");
+  const regretSlot = game.querySelector("[data-mab-regret]");
+  const bestGuessSlot = game.querySelector("[data-mab-best-guess]");
+  const messageSlot = game.querySelector("[data-mab-message]");
+  const historyList = game.querySelector("[data-mab-history]");
+  const revealBox = game.querySelector("[data-mab-reveal]");
+  const probabilityBox = game.querySelector("[data-mab-probabilities]");
+  const helperButton = game.querySelector("[data-mab-helper]");
+  const resetButton = game.querySelector("[data-mab-reset]");
+  const armButtons = [...game.querySelectorAll("[data-arm]")];
+  const armNames = ["Arm A", "Arm B", "Arm C", "Arm D"];
+  const maxRounds = 30;
+  const baseProbabilities = [0.18, 0.36, 0.58, 0.76];
+  const messages = {
+    reward: [
+      "Reward. The arm is trying to look employable.",
+      "Insight point collected. A tiny theorem somewhere stood up straighter.",
+      "Reward landed. Exploitation is nodding respectfully."
+    ],
+    miss: [
+      "No reward. Still data. The spreadsheet accepts all feelings.",
+      "No point this time. Exploration sent a receipt.",
+      "Missed reward. The confidence interval remains mysterious."
+    ],
+    over: "Budget spent. Time to reveal which arm was secretly carrying the snacks."
+  };
+
+  let probabilities = [];
+  let counts = [];
+  let rewards = [];
+  let totalReward = 0;
+  let totalRegret = 0;
+  let round = 0;
+  let history = [];
+
+  const shuffle = (items) => {
+    const copy = [...items];
+
+    for (let index = copy.length - 1; index > 0; index -= 1) {
+      const swapIndex = Math.floor(Math.random() * (index + 1));
+      [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+    }
+
+    return copy;
+  };
+
+  const bestArmIndex = () => probabilities.indexOf(Math.max(...probabilities));
+
+  const bestGuessIndex = () => {
+    let guess = -1;
+    let bestAverage = -1;
+
+    counts.forEach((count, index) => {
+      if (!count) {
+        return;
+      }
+
+      const average = rewards[index] / count;
+
+      if (average > bestAverage) {
+        bestAverage = average;
+        guess = index;
+      }
+    });
+
+    return guess;
+  };
+
+  const setMessage = (reward) => {
+    if (!messageSlot) {
+      return;
+    }
+
+    const pool = reward ? messages.reward : messages.miss;
+    messageSlot.textContent = pool[Math.floor(Math.random() * pool.length)];
+  };
+
+  const renderHistory = () => {
+    if (!historyList) {
+      return;
+    }
+
+    historyList.innerHTML = "";
+
+    if (!history.length) {
+      const item = document.createElement("li");
+      item.textContent = "No pulls yet. The arms are pretending to be mysterious.";
+      historyList.append(item);
+      return;
+    }
+
+    history.slice(-6).reverse().forEach((entry) => {
+      const item = document.createElement("li");
+      item.textContent = `Pull ${entry.round}: ${entry.arm} gave ${entry.reward ? "1 insight point" : "0 points"}.`;
+      historyList.append(item);
+    });
+  };
+
+  const renderReveal = () => {
+    if (!(revealBox instanceof HTMLElement) || !probabilityBox) {
+      return;
+    }
+
+    probabilityBox.innerHTML = "";
+    probabilities.forEach((probability, index) => {
+      const item = document.createElement("span");
+      item.textContent = `${armNames[index]}: ${(probability * 100).toFixed(0)}%`;
+      item.className = index === bestArmIndex() ? "best-probability" : "";
+      probabilityBox.append(item);
+    });
+
+    revealBox.hidden = false;
+  };
+
+  const render = () => {
+    if (roundSlot) {
+      roundSlot.textContent = `${round} / ${maxRounds}`;
+    }
+
+    if (rewardSlot) {
+      rewardSlot.textContent = String(totalReward);
+    }
+
+    if (regretSlot) {
+      regretSlot.textContent = totalRegret.toFixed(2);
+    }
+
+    const guess = bestGuessIndex();
+    if (bestGuessSlot) {
+      bestGuessSlot.textContent = guess >= 0 ? armNames[guess] : "None yet";
+    }
+
+    armButtons.forEach((button) => {
+      const index = Number(button.dataset.arm);
+      const averageSlot = game.querySelector(`[data-arm-average="${index}"]`);
+      const countSlot = game.querySelector(`[data-arm-count="${index}"]`);
+      const count = counts[index];
+      const average = count ? rewards[index] / count : 0;
+
+      button.classList.toggle("is-best-guess", guess === index);
+      button.disabled = round >= maxRounds;
+
+      if (averageSlot) {
+        averageSlot.textContent = count ? average.toFixed(2) : "?";
+      }
+
+      if (countSlot) {
+        countSlot.textContent = `${count} pull${count === 1 ? "" : "s"}`;
+      }
+    });
+
+    if (helperButton instanceof HTMLButtonElement) {
+      helperButton.disabled = round >= maxRounds;
+    }
+
+    renderHistory();
+
+    if (round >= maxRounds) {
+      if (messageSlot) {
+        const best = bestArmIndex();
+        const guessText = guess === best ? "You found the best-looking arm." : `The best hidden arm was ${armNames[best]}.`;
+        messageSlot.textContent = `${messages.over} ${guessText}`;
+      }
+
+      renderReveal();
+    }
+  };
+
+  const pullArm = (index, source = "you") => {
+    if (round >= maxRounds || Number.isNaN(index)) {
+      return;
+    }
+
+    const bestProbability = Math.max(...probabilities);
+    const reward = Math.random() < probabilities[index] ? 1 : 0;
+    round += 1;
+    counts[index] += 1;
+    rewards[index] += reward;
+    totalReward += reward;
+    totalRegret += bestProbability - probabilities[index];
+
+    armButtons.forEach((button) => button.classList.toggle("is-last", Number(button.dataset.arm) === index));
+
+    history.push({
+      arm: `${armNames[index]}${source === "helper" ? " via helper" : ""}`,
+      reward,
+      round
+    });
+
+    setMessage(Boolean(reward));
+    render();
+  };
+
+  const helperPick = () => {
+    const unexplored = counts
+      .map((count, index) => ({ count, index }))
+      .filter((item) => item.count === 0)
+      .map((item) => item.index);
+
+    if (unexplored.length) {
+      return unexplored[Math.floor(Math.random() * unexplored.length)];
+    }
+
+    if (Math.random() < 0.22) {
+      return Math.floor(Math.random() * armButtons.length);
+    }
+
+    return bestGuessIndex();
+  };
+
+  const reset = () => {
+    probabilities = shuffle(baseProbabilities);
+    counts = Array(armButtons.length).fill(0);
+    rewards = Array(armButtons.length).fill(0);
+    totalReward = 0;
+    totalRegret = 0;
+    round = 0;
+    history = [];
+
+    armButtons.forEach((button) => {
+      button.disabled = false;
+      button.classList.remove("is-last", "is-best-guess");
+    });
+
+    if (revealBox instanceof HTMLElement) {
+      revealBox.hidden = true;
+    }
+
+    if (probabilityBox) {
+      probabilityBox.innerHTML = "";
+    }
+
+    if (messageSlot) {
+      messageSlot.textContent = "New game. The arms have shuffled their secrets.";
+    }
+
+    render();
+  };
+
+  armButtons.forEach((button) => {
+    button.addEventListener("click", () => pullArm(Number(button.dataset.arm)));
+  });
+
+  helperButton?.addEventListener("click", () => pullArm(helperPick(), "helper"));
+  resetButton?.addEventListener("click", reset);
+  reset();
+});
+
 const sections = [...document.querySelectorAll("main section[id]")];
 const navAnchors = [...document.querySelectorAll(".nav-links a")];
 
@@ -402,24 +747,5 @@ copyEmailButton?.addEventListener("click", async () => {
     }, 1600);
   } catch {
     window.location.href = `mailto:${email}`;
-  }
-});
-
-contactForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const name = formData.get("name") || "";
-  const email = formData.get("email") || "";
-  const topic = formData.get("topic") || "Website inquiry";
-  const message = formData.get("message") || "";
-  const recipient = emailLink?.textContent?.trim() || "your.email@university.edu";
-  const subject = encodeURIComponent(`[Website] ${topic}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\n${message}`);
-
-  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-  if (formNote) {
-    formNote.textContent = "Opening your email app with the message prepared.";
   }
 });

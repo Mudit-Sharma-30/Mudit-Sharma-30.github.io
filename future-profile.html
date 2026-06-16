@@ -3,41 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mudit Sharma is a researcher and professional building work across research, teaching, engineering, collaboration, and public scholarship.">
-  <meta name="keywords" content="Mudit Sharma, research, PhD, academic portfolio, publications, teaching, collaborators, professional website">
-  <meta name="author" content="Mudit Sharma">
-  <meta property="og:title" content="Mudit Sharma | Researcher and Professional">
+  <meta name="description" content="Your Name is a researcher and professional building work across research, teaching, engineering, collaboration, and public scholarship.">
+  <meta name="keywords" content="Your Name, research, PhD, academic portfolio, publications, teaching, collaborators, professional website">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Your Name | Researcher and Professional">
   <meta property="og:description" content="Research, publications, teaching, collaborators, projects, and professional portfolio.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/research-workspace.png">
   <meta name="theme-color" content="#0d4f49">
-  <title>Mudit Sharma | Researcher and Professional</title>
+  <title>Your Name | Researcher and Professional</title>
   <link rel="preload" href="assets/research-workspace.png" as="image">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Mudit Sharma",
+      "name": "Your Name",
       "jobTitle": "PhD Student",
       "affiliation": {
         "@type": "CollegeOrUniversity",
         "name": "University Name"
       },
-      "email": "mailto:muditsharmaldh@gmail.com",
+      "email": "mailto:your.email@gmail.com",
       "url": "https://your-domain.example"
     }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
 
   <header class="site-header" data-header>
     <nav class="nav shell" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand-mark">MS</span>
+        <span class="brand-mark">YN</span>
         <span class="brand-copy">
-          <strong>Mudit Sharma</strong>
+          <strong>Your Name</strong>
           <small>Researcher and builder</small>
         </span>
       </a>
@@ -50,17 +51,16 @@
 
       <div class="nav-links" data-nav-links>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#interests">Area of Research</a>
         <a href="#publications">Publications</a>
-        <a href="#skills">Toolkit</a>
+        <a href="#coursework">Coursework</a>
+        <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
         <details class="nav-more">
           <summary>More</summary>
           <div class="nav-more-menu">
-            <a href="#interests">Research Interests</a>
-            <a href="#journey">Academic Journey</a>
-            <a href="#coursework">Coursework</a>
-            <a href="#teaching">Teaching</a>
+            <a href="research-interests.html">Research Interest</a>
+            <a href="mab-game.html">MAB Game</a>
             <a href="#collaborators">Collaborators</a>
             <a href="gallery.html">Gallery</a>
             <a href="cv.html">CV</a>
@@ -79,17 +79,30 @@
 
   <main id="main">
     <!--
+      SECTION: Random Quote
+      Purpose: A lightweight, memorable opening that changes on click.
+      Update: Edit data-quotes with short quotes, jokes, or research reminders.
+      Add entries: Separate each quote with a vertical bar.
+    -->
+    <section class="quote-strip" id="top" aria-label="Random research quote">
+      <div class="shell quote-card">
+        <p data-random-quote data-quotes="Explore first, regret later. Preferably in a theorem.|A bandit problem is just decision-making with suspense.|Today's tiny lemma is tomorrow's politely typeset result.|If the proof is stuck, hydrate the mathematician.|The algorithm is confident. The confidence interval is less impressed.|My research area has arms. None of them help with carrying groceries.|Some days the best baseline is a clean notebook and a second cup of patience.|The best arm is hidden. That feels personal, but we proceed.|I trust the plot, but I still ask for error bars.|Research plan: read, doubt, simulate, repeat.|A clean baseline is self-care for algorithms.|Exploration is curiosity with a budget.|Regret is not failure; it is accounting with opinions.|If all arms look equal, the theorem is either elegant or hiding something.|Good experiments start with boring filenames.|A preference label is a tiny vote from uncertainty.|Online learning exists because data refuses to arrive all at once.|The algorithm explored. The advisor asked for ablations.|A small proof is still a proof. Give it a nice name.|When in doubt, plot the regret curve and breathe.">Explore first, regret later. Preferably in a theorem.</p>
+        <button class="quote-button" type="button" data-random-quote-button>New quote</button>
+      </div>
+    </section>
+
+    <!--
       SECTION: Hero
       Purpose: First impression for the long-term personal brand.
       Update: Replace name, role, short introduction, keywords, social links, and CV link.
       Add entries: Add more keyword chips inside .keyword-row and more links inside .hero-social.
     -->
-    <section class="hero" id="top" aria-label="Introduction">
+    <section class="hero" aria-label="Introduction">
       <div class="hero-bg" data-parallax aria-hidden="true"></div>
       <div class="hero-grid shell">
         <div class="hero-copy reveal">
           <p class="eyebrow">Research | Teaching | Engineering | Collaboration</p>
-          <h1>Mudit Sharma</h1>
+          <h1>Your Name</h1>
           <p class="role-line">
             <span>Currently:</span> PhD Student studying bandits, online learning, and preference learning
           </p>
@@ -111,7 +124,8 @@
 
           <div class="hero-actions">
             <a class="button primary" href="cv.html">Download CV</a>
-            <a class="button secondary" href="#publications">View Work</a>
+            <a class="button secondary" href="research-interests.html">Research Interest</a>
+            <a class="button secondary" href="mab-game.html">Play MAB Game</a>
           </div>
 
           <div class="hero-social" aria-label="Professional links">
@@ -124,7 +138,7 @@
 
         <aside class="profile-card reveal" aria-label="Profile summary">
           <div class="portrait-frame">
-            <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Mudit Sharma">
+            <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Your Name">
           </div>
           <div class="profile-card-body">
             <p class="profile-label">Digital identity</p>
@@ -146,37 +160,7 @@
           </div>
         </aside>
       </div>
-    </section>
-
-    <!--
-      SECTION: Research Impact Dashboard
-      Purpose: Fast proof of activity across research, teaching, and collaborations.
-      Update: Change data-count values as your profile grows.
-      Add entries: Copy one .impact-card and update the label and count.
-    -->
-    <section class="impact-strip" id="impact" aria-label="Research impact dashboard">
-      <div class="shell impact-grid">
-        <article class="impact-card reveal">
-          <strong data-counter data-count="3">0</strong>
-          <span>Publications</span>
-        </article>
-        <article class="impact-card reveal">
-          <strong data-counter data-count="6">0</strong>
-          <span>Projects</span>
-        </article>
-        <article class="impact-card reveal">
-          <strong data-counter data-count="12">0</strong>
-          <span>Collaborators</span>
-        </article>
-        <article class="impact-card reveal">
-          <strong data-counter data-count="4">0</strong>
-          <span>Years of Research</span>
-        </article>
-        <article class="impact-card reveal">
-          <strong data-counter data-count="5">0</strong>
-          <span>Courses Assisted</span>
-        </article>
-      </div>
+      <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
     </section>
 
     <!--
@@ -187,7 +171,7 @@
     <section class="section about-section" id="about">
       <div class="shell about-layout">
         <div class="about-media reveal">
-          <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Mudit Sharma" loading="lazy">
+          <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Your Name" loading="lazy">
         </div>
         <div class="about-copy reveal">
           <p class="section-kicker">About Me</p>
@@ -200,14 +184,15 @@
           <blockquote>
             My research mission is to understand how algorithms should explore,
             compare, learn preferences, and make reliable decisions under
-            uncertainty.
+            uncertainty. In plain language: I study how to make good choices
+            before the universe has finished explaining itself.
           </blockquote>
         </div>
       </div>
     </section>
 
     <!--
-      SECTION: Research Interests
+      SECTION: Area of Research
       Purpose: Explain bandits, online learning, preference learning, and learning theory with compact visuals.
       Update: Edit card titles, captions, and graph node labels as your research scope changes.
       Add entries: Add another .visual-card and keep SVG text short for mobile readability.
@@ -215,7 +200,7 @@
     <section class="section interests-section" id="interests">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Research Interests</p>
+          <p class="section-kicker">Area of Research</p>
           <h2>Learning by trying, comparing, and adapting.</h2>
           <p>
             My work studies decision-making systems that must learn from partial
@@ -367,103 +352,6 @@
     </section>
 
     <!--
-      SECTION: Academic Journey Timeline
-      Purpose: Education history and major milestones in chronological form.
-      Update: Edit dates, institution names, degree names, milestones, and descriptions.
-      Add entries: Copy one .timeline-item and keep the data-step number unique.
-    -->
-    <section class="section timeline-section" id="journey">
-      <div class="shell">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Academic Journey</p>
-          <h2>Milestones that shaped the work.</h2>
-          <p>Education, research transitions, teaching roles, and major professional moments.</p>
-        </div>
-
-        <div class="journey-timeline" aria-label="Academic timeline">
-          <article class="timeline-item reveal" data-step="01">
-            <time>[Year - Present]</time>
-            <h3>PhD in [Field]</h3>
-            <p>[University Name]. Dissertation focus: [working dissertation theme].</p>
-          </article>
-          <article class="timeline-item reveal" data-step="02">
-            <time>[Year]</time>
-            <h3>[Major Milestone]</h3>
-            <p>Completed qualifying exam, proposal defense, fieldwork, major project, or lab rotation.</p>
-          </article>
-          <article class="timeline-item reveal" data-step="03">
-            <time>[Year]</time>
-            <h3>[Previous Degree / Role]</h3>
-            <p>[Institution or organization]. Add thesis title, honors, or key project.</p>
-          </article>
-          <article class="timeline-item reveal" data-step="04">
-            <time>[Year]</time>
-            <h3>[Research / Industry Experience]</h3>
-            <p>Summarize internship, research assistantship, fellowship, or professional experience.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      SECTION: Research
-      Purpose: Research themes, current projects, ongoing work, and future directions.
-      Update: Replace card titles, descriptions, status labels, and project links.
-      Add entries: Copy a .research-card. Keep each card concise and outcome-focused.
-    -->
-    <section class="section research-section" id="research">
-      <div class="shell">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Research</p>
-          <h2>Bandits, preferences, online learning, and theory.</h2>
-          <p>
-            A structured view of the questions I am pursuing now: how algorithms
-            should learn from limited feedback, pairwise preferences, and
-            sequential interaction.
-          </p>
-        </div>
-
-        <div class="research-layout">
-          <article class="research-card primary-card reveal">
-            <span class="status-pill">Research Theme</span>
-            <h3>Multi-Armed Bandits and Sequential Decision Making</h3>
-            <p>
-              I study how learners allocate trials across competing actions,
-              balancing information gathering with reward-seeking over time.
-            </p>
-            <a href="#">Read more</a>
-          </article>
-          <article class="research-card reveal">
-            <span class="status-pill">Current Project</span>
-            <h3>Dueling Bandits and Preference Feedback</h3>
-            <p>Learning from comparisons when users can say which option they prefer, but not assign absolute scores.</p>
-            <ul class="meta-list">
-              <li>Focus: pairwise comparisons, preference noise, regret</li>
-              <li>Output: algorithms, guarantees, and empirical evaluation</li>
-            </ul>
-          </article>
-          <article class="research-card reveal">
-            <span class="status-pill">Ongoing Work</span>
-            <h3>Online Learning Under Uncertainty</h3>
-            <p>Designing algorithms that adapt as data arrives, decisions compound, and environments change.</p>
-            <ul class="meta-list">
-              <li>Focus: adaptive policies, regret analysis, robustness</li>
-              <li>Status: active research direction</li>
-            </ul>
-          </article>
-          <article class="research-card reveal">
-            <span class="status-pill">Future Direction</span>
-            <h3>Learning Theory for Preference-Driven Systems</h3>
-            <p>
-              Building theoretical tools that explain when preference-learning
-              systems can make reliable decisions from sparse, comparative data.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
       SECTION: Publications
       Purpose: Published papers, under-review manuscripts, and working papers.
       Update: Edit data-status and data-year values so filters work correctly.
@@ -496,7 +384,7 @@
             <div class="pub-body">
               <span class="status-pill">Published</span>
               <h3>[Paper Title].</h3>
-              <p><strong>Mudit Sharma</strong>, Coauthor One, Coauthor Two.</p>
+              <p><strong>Your Name</strong>, Coauthor One, Coauthor Two.</p>
               <p><em>[Journal / Conference Name]</em>. DOI: [doi-link]</p>
               <div class="pub-links">
                 <a href="#">PDF</a>
@@ -512,7 +400,7 @@
             <div class="pub-body">
               <span class="status-pill">Under Review</span>
               <h3>[Manuscript Title].</h3>
-              <p><strong>Mudit Sharma</strong>, Coauthor One.</p>
+              <p><strong>Your Name</strong>, Coauthor One.</p>
               <p>Submitted to <em>[Journal / Conference Name]</em>.</p>
               <div class="pub-links">
                 <a href="#">Preprint</a>
@@ -527,7 +415,7 @@
             <div class="pub-body">
               <span class="status-pill">Working Paper</span>
               <h3>[Working Paper Title].</h3>
-              <p><strong>Mudit Sharma</strong>.</p>
+              <p><strong>Your Name</strong>.</p>
               <p>Draft in preparation for [venue / dissertation chapter].</p>
               <div class="pub-links">
                 <a href="#">Abstract</a>
@@ -582,42 +470,37 @@
     </section>
 
     <!--
-      SECTION: Teaching Assistantships
-      Purpose: Courses assisted, responsibilities, semesters, and teaching growth.
-      Update: Replace course names, instructor names, semesters, and responsibilities.
-      Add entries: Copy a .teaching-card for every course or semester.
+      SECTION: Teaching Assistant Timeline
+      Purpose: Timeline of TA roles, instructors, subjects, and responsibilities.
+      Update: Replace course names, instructor names, semesters, and duties.
+      Add entries: Copy one .timeline-item and update data-step in sequence.
     -->
-    <section class="section teaching-section" id="teaching">
-      <div class="shell split-layout">
+    <section class="section teaching-section timeline-section" id="teaching">
+      <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Teaching</p>
-          <h2>Teaching assistantships and student support.</h2>
+          <p class="section-kicker">Teaching Assistant Timeline</p>
+          <h2>Courses I helped teach, and the people I learned teaching from.</h2>
           <p>
-            I value teaching as a way to make difficult ideas clearer, build
-            confidence, and help students learn by doing.
+            Use this timeline to record under whom you served as a TA, what
+            subject you supported, and what kind of student-facing work you did.
           </p>
         </div>
 
-        <div class="teaching-list">
-          <article class="teaching-card reveal">
+        <div class="journey-timeline" aria-label="Teaching assistant timeline">
+          <article class="timeline-item reveal" data-step="TA1">
             <time>[Fall 2025]</time>
-            <h3>[Course Name]</h3>
-            <p>[Department], Instructor: [Instructor Name]</p>
-            <ul class="meta-list">
-              <li>Led discussions or tutorials for [number] students.</li>
-              <li>Held office hours and reviewed assignments.</li>
-              <li>Prepared rubrics, lab material, or review sessions.</li>
-            </ul>
+            <h3>[Subject / Course Name]</h3>
+            <p><strong>Instructor:</strong> Prof. [Instructor Name]. Responsibilities: tutorials, office hours, assignment support, and grading coordination.</p>
           </article>
-          <article class="teaching-card reveal">
+          <article class="timeline-item reveal" data-step="TA2">
             <time>[Spring 2025]</time>
-            <h3>[Course Name]</h3>
-            <p>[Department], Instructor: [Instructor Name]</p>
-            <ul class="meta-list">
-              <li>Supported lectures, labs, recitations, and course logistics.</li>
-              <li>Mentored undergraduate or master's students.</li>
-              <li>Managed course platform feedback and grading cycles.</li>
-            </ul>
+            <h3>[Subject / Course Name]</h3>
+            <p><strong>Instructor:</strong> Prof. [Instructor Name]. Responsibilities: labs, recitations, doubt sessions, and course platform feedback.</p>
+          </article>
+          <article class="timeline-item reveal" data-step="TA3">
+            <time>[Future]</time>
+            <h3>[Upcoming TA Role]</h3>
+            <p><strong>Instructor:</strong> [Instructor Name]. Add the course once confirmed. Tiny reminder: grading is temporary, pedagogy is forever.</p>
           </article>
         </div>
       </div>
@@ -710,155 +593,6 @@
     </section>
 
     <!--
-      SECTION: Skills
-      Purpose: Modern skills display for academic, industry, and entrepreneurial paths.
-      Update: Replace skill names, data-level values, and dashboard metrics with your actual toolkit.
-      Add entries: Copy one .toolkit-module or .skill-chip and keep the same classes for animations.
-    -->
-    <section class="section skills-section" id="skills">
-      <div class="shell">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Skills</p>
-          <h2>Research toolkit and professional capabilities.</h2>
-          <p>
-            A compact view of the technical stack I use to design algorithms,
-            analyze sequential data, write rigorous theory, and build reproducible
-            research systems.
-          </p>
-        </div>
-
-        <div class="toolkit-console reveal" aria-label="Research toolkit dashboard">
-          <div class="toolkit-orbit" aria-hidden="true">
-            <svg class="toolkit-radar" viewBox="0 0 420 420">
-              <defs>
-                <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0" stop-color="currentColor" stop-opacity="0.34"></stop>
-                  <stop offset="0.62" stop-color="currentColor" stop-opacity="0.08"></stop>
-                  <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
-                </radialGradient>
-              </defs>
-              <circle class="radar-halo" cx="210" cy="210" r="170"></circle>
-              <circle class="radar-ring" cx="210" cy="210" r="145"></circle>
-              <circle class="radar-ring" cx="210" cy="210" r="98"></circle>
-              <circle class="radar-ring" cx="210" cy="210" r="52"></circle>
-              <line class="radar-axis" x1="210" y1="40" x2="210" y2="380"></line>
-              <line class="radar-axis" x1="40" y1="210" x2="380" y2="210"></line>
-              <line class="radar-axis diagonal" x1="90" y1="90" x2="330" y2="330"></line>
-              <line class="radar-axis diagonal" x1="330" y1="90" x2="90" y2="330"></line>
-              <path class="radar-sweep" d="M210 210L210 58A152 152 0 0 1 350 268Z"></path>
-              <g class="orbit orbit-one">
-                <circle cx="210" cy="65" r="8"></circle>
-              </g>
-              <g class="orbit orbit-two">
-                <circle cx="210" cy="112" r="7"></circle>
-              </g>
-              <g class="orbit orbit-three">
-                <circle cx="210" cy="158" r="6"></circle>
-              </g>
-              <text x="210" y="202" text-anchor="middle">Toolkit</text>
-              <text x="210" y="224" text-anchor="middle">Core</text>
-            </svg>
-          </div>
-
-          <div class="toolkit-status">
-            <span class="signal-dot"></span>
-            <span>Research systems online</span>
-            <strong>Bandits + Theory + Engineering</strong>
-          </div>
-
-          <div class="skills-grid">
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head">
-                <span>01</span>
-                <h3>Programming Languages</h3>
-              </div>
-              <div class="skill-meter" data-level="92"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">Python</button>
-                <button class="skill-badge" type="button">R</button>
-                <button class="skill-badge" type="button">SQL</button>
-                <button class="skill-badge" type="button">JavaScript</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head">
-                <span>02</span>
-                <h3>Machine Learning</h3>
-              </div>
-              <div class="skill-meter" data-level="88"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">Bandit Algorithms</button>
-                <button class="skill-badge" type="button">Online Learning</button>
-                <button class="skill-badge" type="button">Preference Learning</button>
-                <button class="skill-badge" type="button">Model Evaluation</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head">
-                <span>03</span>
-                <h3>Data Science</h3>
-              </div>
-              <div class="skill-meter" data-level="84"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">Simulation</button>
-                <button class="skill-badge" type="button">Visualization</button>
-                <button class="skill-badge" type="button">Statistics</button>
-                <button class="skill-badge" type="button">Experiment Design</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head">
-                <span>04</span>
-                <h3>Research Tools</h3>
-              </div>
-              <div class="skill-meter" data-level="90"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">LaTeX</button>
-                <button class="skill-badge" type="button">Zotero</button>
-                <button class="skill-badge" type="button">Proof Writing</button>
-                <button class="skill-badge" type="button">Reproducible Workflows</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head">
-                <span>05</span>
-                <h3>Cloud Technologies</h3>
-              </div>
-              <div class="skill-meter" data-level="72"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">AWS</button>
-                <button class="skill-badge" type="button">GCP</button>
-                <button class="skill-badge" type="button">Docker</button>
-                <button class="skill-badge" type="button">HPC</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head">
-                <span>06</span>
-                <h3>Software Engineering Tools</h3>
-              </div>
-              <div class="skill-meter" data-level="86"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">Git</button>
-                <button class="skill-badge" type="button">Testing</button>
-                <button class="skill-badge" type="button">APIs</button>
-                <button class="skill-badge" type="button">Documentation</button>
-              </div>
-            </article>
-          </div>
-
-          <div class="toolkit-footer" aria-label="Toolkit summary">
-            <span>Algorithms</span>
-            <span>Theory</span>
-            <span>Simulation</span>
-            <span>Reproducibility</span>
-            <span>Deployment</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--
       SECTION: Gallery Preview
       Purpose: Keep the homepage focused while linking to the full dedicated gallery page.
       Update: Replace preview image/captions or remove this section if you want Gallery only in the header.
@@ -872,7 +606,8 @@
             <h2>Research life, travel, conferences, and personal interests have their own page.</h2>
             <p>
               I moved the full gallery out of the homepage so this page stays
-              focused on research, publications, teaching, collaborators, and toolkit.
+              focused on area of research, publications, coursework, teaching,
+              collaborators, and contact.
             </p>
             <a class="button primary" href="gallery.html">Open Gallery</a>
           </div>
@@ -890,9 +625,9 @@
 
     <!--
       SECTION: Contact
-      Purpose: Email, social links, and contact form for collaborations and opportunities.
-      Update: Replace email, links, office/lab, and form recipient.
-      Add entries: Add more links inside .contact-links.
+      Purpose: Static contact details for GitHub Pages or any other static host.
+      Update: Replace lab address, email, and profile links. No phone number is included.
+      Add entries: Copy one .contact-card for more professional profiles or office details.
     -->
     <section class="section contact-section" id="contact">
       <div class="shell contact-layout">
@@ -903,42 +638,44 @@
             I welcome conversations about research, teaching, technical projects,
             mentoring, consulting, and future collaborations.
           </p>
-          <div class="contact-links">
-            <a href="mailto:muditsharmaldh@gmail.com" data-email>muditsharmaldh@gmail.com</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Google Scholar</a>
-            <a href="#">ORCID</a>
-          </div>
           <button class="button secondary copy-email" type="button" data-copy-email>Copy Email</button>
         </div>
 
-        <form class="contact-form reveal" data-contact-form>
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" placeholder="Your name">
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" placeholder="your.email@example.com">
-          </label>
-          <label>
-            Topic
-            <select name="topic">
-              <option>Research collaboration</option>
-              <option>Teaching or mentoring</option>
-              <option>Speaking invitation</option>
-              <option>Consulting or industry project</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" placeholder="Write a short message"></textarea>
-          </label>
-          <button class="button primary" type="submit">Start Email</button>
-          <p class="form-note" data-form-note>This static form opens your email app with the message prepared.</p>
-        </form>
+        <div class="contact-card-grid reveal" aria-label="Contact details">
+          <article class="contact-card">
+            <span>Email</span>
+            <h3>Gmail / Academic Email</h3>
+            <a href="mailto:your.email@gmail.com" data-email>your.email@gmail.com</a>
+          </article>
+          <article class="contact-card">
+            <span>Lab Address</span>
+            <h3>[Lab / Department Name]</h3>
+            <p>[Building Name], [Room Number], [University Name], [City, Country]</p>
+          </article>
+          <article class="contact-card">
+            <span>Professional</span>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/your-profile/">linkedin.com/in/your-profile</a>
+          </article>
+          <article class="contact-card">
+            <span>Code</span>
+            <h3>GitHub</h3>
+            <a href="https://github.com/your-username">github.com/your-username</a>
+          </article>
+          <article class="contact-card">
+            <span>Research Profiles</span>
+            <h3>Scholar / ORCID</h3>
+            <div class="contact-mini-links">
+              <a href="#">Google Scholar</a>
+              <a href="#">ORCID</a>
+            </div>
+          </article>
+          <article class="contact-card">
+            <span>Best For</span>
+            <h3>Research conversations</h3>
+            <p>Bandits, online learning, preference learning, teaching, and collaboration ideas.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1303,7 +1040,7 @@
 
   <footer class="site-footer">
     <div class="shell footer-layout">
-      <p>&copy; <span data-year></span> Mudit Sharma. Last updated June 2026.</p>
+      <p>&copy; <span data-year></span> Your Name. Last updated June 2026.</p>
       <a href="#top">Back to top</a>
     </div>
   </footer>

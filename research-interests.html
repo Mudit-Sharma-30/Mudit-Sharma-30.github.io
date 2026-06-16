@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed research interest page for Your Name, covering multi-armed bandits, dueling bandits, online learning, preference learning, learning theory, and active directions.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Research Interest | Your Name">
+  <meta property="og:description" content="A detailed, accessible explanation of bandits, online learning, preference learning, and active research directions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/research-workspace.png">
+  <title>Research Interest | Your Name</title>
+  <link rel="preload" href="assets/research-workspace.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="research-detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Research page navigation">
+      <a class="brand" href="index.html#top" aria-label="Go to homepage">
+        <span class="brand-mark">YN</span>
+        <span class="brand-copy">
+          <strong>Your Name</strong>
+          <small>Research notes</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" data-nav-links>
+        <a href="index.html#about">About</a>
+        <a href="index.html#interests">Area of Research</a>
+        <a href="#research-interest">Research Interest</a>
+        <a href="#concepts">Concepts</a>
+        <a href="index.html#publications">Publications</a>
+        <details class="nav-more">
+          <summary>More</summary>
+          <div class="nav-more-menu">
+            <a href="index.html#coursework">Coursework</a>
+            <a href="index.html#teaching">Teaching</a>
+            <a href="index.html#collaborators">Collaborators</a>
+            <a href="mab-game.html">MAB Game</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="cv.html">CV</a>
+          </div>
+        </details>
+      </div>
+
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 3v2.2M12 18.8V21M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M3 12h2.2M18.8 12H21M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"></path>
+          <circle cx="12" cy="12" r="4.3"></circle>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!--
+      PAGE: Detailed Research Interest
+      Purpose: Explain the research area in a way visitors can understand.
+      Update: Replace placeholders with your exact projects, collaborators, and draft links.
+    -->
+    <section class="research-detail-hero" id="top" aria-label="Detailed research interest introduction">
+      <div class="hero-bg" data-parallax aria-hidden="true"></div>
+      <div class="shell research-detail-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Research Details</p>
+          <h1>Bandits, preferences, and learning while decisions are already happening.</h1>
+          <p class="hero-summary">
+            This page explains the ideas behind Multi-Armed Bandits, Dueling
+            Bandits, Online Learning, Preference Learning, and Learning Theory,
+            then connects them to the active research directions you can update
+            over time.
+          </p>
+          <div class="keyword-row" aria-label="Research keywords">
+            <span>Explore</span>
+            <span>Compare</span>
+            <span>Adapt</span>
+            <span>Prove</span>
+            <span>Repeat gently</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="mab-game.html">Play MAB Game</a>
+            <a class="button secondary" href="#research-interest">Read Research Notes</a>
+          </div>
+        </div>
+
+        <aside class="research-compass reveal" aria-label="Research compass graphic">
+          <svg viewBox="0 0 420 420" role="img" aria-label="Research compass connecting bandits, preferences, online learning, and theory">
+            <circle class="compass-ring" cx="210" cy="210" r="155"></circle>
+            <circle class="compass-ring soft" cx="210" cy="210" r="96"></circle>
+            <line x1="210" y1="55" x2="210" y2="365"></line>
+            <line x1="55" y1="210" x2="365" y2="210"></line>
+            <path class="compass-sweep" d="M210 210L308 118A135 135 0 0 1 340 250Z"></path>
+            <g class="compass-node center"><circle cx="210" cy="210" r="42"></circle><text x="210" y="205" text-anchor="middle">Sequential</text><text x="210" y="224" text-anchor="middle">Decisions</text></g>
+            <g class="compass-node"><circle cx="210" cy="56" r="34"></circle><text x="210" y="52" text-anchor="middle">Learning</text><text x="210" y="70" text-anchor="middle">Theory</text></g>
+            <g class="compass-node"><circle cx="365" cy="210" r="36"></circle><text x="365" y="206" text-anchor="middle">Online</text><text x="365" y="224" text-anchor="middle">Learning</text></g>
+            <g class="compass-node"><circle cx="210" cy="365" r="38"></circle><text x="210" y="361" text-anchor="middle">Preference</text><text x="210" y="379" text-anchor="middle">Learning</text></g>
+            <g class="compass-node"><circle cx="55" cy="210" r="36"></circle><text x="55" y="206" text-anchor="middle">Bandit</text><text x="55" y="224" text-anchor="middle">Feedback</text></g>
+          </svg>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section current-work-section" id="research-interest">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Research Interest</p>
+          <h2>Active directions I am shaping into research questions.</h2>
+          <p>
+            This section is intentionally more detailed than the homepage. Use it
+            for the ideas you are currently reading, testing, proving, discussing,
+            or preparing to turn into archived drafts and future manuscripts.
+          </p>
+        </div>
+
+        <div class="early-work-grid">
+          <article class="early-work-card reveal">
+            <span class="status-pill">Core direction</span>
+            <h3>Multi-Armed Bandits and exploration strategy</h3>
+            <p>
+              Study how a learner should allocate trials across uncertain
+              actions when every choice gives information about only one arm.
+              This is the foundation for thinking about exploration,
+              exploitation, regret, and sequential decision quality.
+            </p>
+            <ul class="meta-list">
+              <li>Questions: Which arm should be tried next, and why?</li>
+              <li>Methods to compare: UCB-style optimism, Thompson sampling, and elimination ideas</li>
+              <li>Useful outputs: simulations, regret plots, and concise theorem notes</li>
+            </ul>
+          </article>
+          <article class="early-work-card reveal">
+            <span class="status-pill">Preference feedback</span>
+            <h3>Dueling Bandits and pairwise comparison learning</h3>
+            <p>
+              Explore settings where feedback comes from comparisons rather
+              than scores. Instead of asking "how much reward did this action
+              get?", the learner asks "which of these two options is preferred?"
+            </p>
+            <ul class="meta-list">
+              <li>Questions: What can be learned from noisy pairwise preferences?</li>
+              <li>Objects to define: preference matrix, Condorcet winner, regret notion</li>
+              <li>Next step: connect assumptions to realistic human-feedback settings</li>
+            </ul>
+          </article>
+          <article class="early-work-card reveal">
+            <span class="status-pill">Sequential setting</span>
+            <h3>Online Learning and adaptive decision rules</h3>
+            <p>
+              Build intuition for algorithms that update after each observation.
+              The goal is to understand how decisions compound when information
+              arrives gradually and the environment may not be perfectly still.
+            </p>
+            <ul class="meta-list">
+              <li>Questions: How fast should the learner adapt?</li>
+              <li>Focus: regret, robustness, changing feedback, and repeated interaction</li>
+              <li>Current artifact: reading summaries and small experiment scaffolds</li>
+            </ul>
+          </article>
+          <article class="early-work-card reveal">
+            <span class="status-pill">Human signal</span>
+            <h3>Preference Learning from rankings, clicks, and choices</h3>
+            <p>
+              Connect bandit feedback to human preference data. The same system
+              may receive comparisons, implicit clicks, rankings, or selected
+              options, and each signal has its own bias and uncertainty.
+            </p>
+            <ul class="meta-list">
+              <li>Questions: What does the observed preference really mean?</li>
+              <li>Risk: treating noisy human feedback as a clean mathematical oracle</li>
+              <li>Useful output: a taxonomy of feedback types and assumptions</li>
+            </ul>
+          </article>
+          <article class="early-work-card reveal">
+            <span class="status-pill">Theory layer</span>
+            <h3>Learning Theory for guarantees and limitations</h3>
+            <p>
+              Use mathematical analysis to understand when a learning rule can
+              be trusted, how much data it needs, and where its assumptions may
+              fail. This is where intuition becomes a careful statement.
+            </p>
+            <ul class="meta-list">
+              <li>Questions: What can be guaranteed, and under which assumptions?</li>
+              <li>Tools: concentration, regret decomposition, lower/upper bounds</li>
+              <li>Current artifact: proof sketches and assumption checklists</li>
+            </ul>
+          </article>
+          <article class="early-work-card reveal">
+            <span class="status-pill">Research practice</span>
+            <h3>Reproducible simulations and archived notes</h3>
+            <p>
+              Keep experiments, reading maps, and draft notes organized from the
+              beginning. The goal is to make future papers easier to verify,
+              explain, and extend.
+            </p>
+            <ul class="meta-list">
+              <li>Questions: Which baselines, metrics, and plots make the idea clear?</li>
+              <li>Artifacts: notebooks, experiment logs, literature tables, draft PDFs</li>
+              <li>Reminder: if future-you cannot reproduce it, future-you will object politely</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section concepts-section" id="concepts">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Concepts</p>
+          <h2>The research area, without assuming the visitor already speaks bandit.</h2>
+        </div>
+
+        <div class="research-detail-grid">
+          <article class="research-detail-card reveal">
+            <span class="status-pill">01</span>
+            <h3>Multi-Armed Bandits</h3>
+            <p>
+              Imagine several options, each with an unknown payoff. The learner
+              chooses one option, observes only that result, and must decide what
+              to try next. The core tension is exploration versus exploitation.
+            </p>
+            <p class="friendly-note">Small translation: the algorithm is learning by poking the world, politely.</p>
+          </article>
+
+          <article class="research-detail-card reveal">
+            <span class="status-pill">02</span>
+            <h3>Dueling Bandits</h3>
+            <p>
+              Sometimes users cannot give a reliable score, but they can compare
+              two options. Dueling bandits learn from pairwise preferences such
+              as "A is better than B" instead of numeric rewards.
+            </p>
+            <p class="friendly-note">Useful when stars, ratings, and vibes refuse to be the same thing.</p>
+          </article>
+
+          <article class="research-detail-card reveal">
+            <span class="status-pill">03</span>
+            <h3>Online Learning</h3>
+            <p>
+              Online learning studies systems that receive data sequentially and
+              update decisions over time. The learner cannot wait for a perfect
+              dataset; it must act, learn, and correct itself as evidence arrives.
+            </p>
+            <p class="friendly-note">The model is basically doing homework while the exam is already happening.</p>
+          </article>
+
+          <article class="research-detail-card reveal">
+            <span class="status-pill">04</span>
+            <h3>Preference Learning</h3>
+            <p>
+              Preference learning asks how to infer what people or systems value
+              from comparisons, rankings, clicks, selections, or other indirect
+              signals. It connects naturally to recommender systems and human-AI
+              feedback.
+            </p>
+          </article>
+
+          <article class="research-detail-card reveal">
+            <span class="status-pill">05</span>
+            <h3>Learning Theory</h3>
+            <p>
+              Learning theory gives the mathematical language for asking when an
+              algorithm should work, how much data it needs, and how much regret
+              or error it may accumulate along the way.
+            </p>
+          </article>
+
+          <article class="research-detail-card reveal">
+            <span class="status-pill">06</span>
+            <h3>Why They Fit Together</h3>
+            <p>
+              Bandits define the feedback structure, online learning defines the
+              sequential setting, preference learning defines the signal, and
+              learning theory helps explain what can be guaranteed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section decision-section" id="decision-loop">
+      <div class="shell decision-layout">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Decision Loop</p>
+          <h2>The common pattern underneath the work.</h2>
+          <p>
+            Most projects on this page can be described as a loop: choose an
+            action, receive limited feedback, update a belief, and choose again.
+          </p>
+        </div>
+        <div class="decision-loop reveal" aria-label="Choose, observe, update, repeat loop">
+          <svg viewBox="0 0 520 280" role="img">
+            <defs>
+              <marker id="arrowHead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0 0L10 5L0 10Z"></path>
+              </marker>
+            </defs>
+            <path class="loop-path" d="M130 78C245 10 410 48 414 140C418 238 230 266 124 204" marker-end="url(#arrowHead)"></path>
+            <g class="loop-node"><circle cx="128" cy="78" r="48"></circle><text x="128" y="74" text-anchor="middle">Choose</text><text x="128" y="92" text-anchor="middle">action</text></g>
+            <g class="loop-node"><circle cx="414" cy="140" r="52"></circle><text x="414" y="136" text-anchor="middle">Observe</text><text x="414" y="154" text-anchor="middle">feedback</text></g>
+            <g class="loop-node"><circle cx="124" cy="204" r="48"></circle><text x="124" y="200" text-anchor="middle">Update</text><text x="124" y="218" text-anchor="middle">belief</text></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-layout">
+      <p>&copy; <span data-year></span> Your Name. Research interest page.</p>
+      <a href="index.html#top">Back to homepage</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

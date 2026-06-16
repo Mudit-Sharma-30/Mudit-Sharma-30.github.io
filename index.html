@@ -3,48 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mudit Sharma is an early-stage PhD researcher and Junior Research Fellow at IIT Ropar working around human-AI systems, bandits, online learning, preference learning, and learning theory.">
-  <meta name="keywords" content="Mudit Sharma, PhD student, IIT Ropar, Junior Research Fellow, multi-armed bandits, dueling bandits, online learning, preference learning, sequential decision making, learning theory, data science">
-  <meta name="author" content="Mudit Sharma">
-  <meta property="og:title" content="Mudit Sharma | PhD Researcher">
-  <meta property="og:description" content="Early-stage PhD profile, research interests, archived drafts, coursework, and current projects.">
+  <meta name="description" content="Your Name is a researcher and professional building work across research, teaching, engineering, collaboration, and public scholarship.">
+  <meta name="keywords" content="Your Name, research, PhD, academic portfolio, publications, teaching, collaborators, professional website">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Your Name | Researcher and Professional">
+  <meta property="og:description" content="Research, publications, teaching, collaborators, projects, and professional portfolio.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/research-workspace.png">
   <meta name="theme-color" content="#0d4f49">
-  <title>Mudit Sharma | PhD Researcher</title>
+  <title>Your Name | Researcher and Professional</title>
   <link rel="preload" href="assets/research-workspace.png" as="image">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Mudit Sharma",
-      "jobTitle": "PhD Student and Junior Research Fellow",
+      "name": "Your Name",
+      "jobTitle": "PhD Student",
       "affiliation": {
         "@type": "CollegeOrUniversity",
-        "name": "IIT Ropar"
+        "name": "University Name"
       },
-      "email": "mailto:muditsharmaldh@gmail.com",
-      "sameAs": [
-        "https://github.com/Mudit-Sharma-30",
-        "https://www.linkedin.com/in/mudit-sharma-komu290220/",
-        "https://www.kaggle.com/muditsharma30",
-        "https://leetcode.com/MuditSharma30/",
-        "https://linktr.ee/muditsharmaldh"
-      ]
+      "email": "mailto:your.email@gmail.com",
+      "url": "https://your-domain.example"
     }
   </script>
 </head>
-<body class="early-stage-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
 
   <header class="site-header" data-header>
     <nav class="nav shell" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand-mark">MS</span>
+        <span class="brand-mark">YN</span>
         <span class="brand-copy">
-          <strong>Mudit Sharma</strong>
-          <small>PhD researcher</small>
+          <strong>Your Name</strong>
+          <small>Researcher and builder</small>
         </span>
       </a>
 
@@ -56,19 +51,19 @@
 
       <div class="nav-links" data-nav-links>
         <a href="#about">About</a>
-        <a href="#interests">Interests</a>
-        <a href="#current-work">Current Work</a>
-        <a href="#archive">Archive</a>
+        <a href="#interests">Area of Research</a>
+        <a href="#publications">Publications</a>
         <a href="#coursework">Coursework</a>
+        <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
         <details class="nav-more">
           <summary>More</summary>
           <div class="nav-more-menu">
-            <a href="#toolkit">Toolkit</a>
-            <a href="#timeline">Timeline</a>
+            <a href="research-interests.html">Research Interest</a>
+            <a href="mab-game.html">MAB Game</a>
+            <a href="#collaborators">Collaborators</a>
             <a href="gallery.html">Gallery</a>
             <a href="cv.html">CV</a>
-            <a href="future-profile.html">Future Profile</a>
           </div>
         </details>
       </div>
@@ -84,24 +79,41 @@
 
   <main id="main">
     <!--
-      SECTION: Early-stage hero
-      Purpose: Honest first-year PhD positioning without overclaiming publications or mature impact.
-      Update: Replace name, affiliation, advisor, and current research sentence.
+      SECTION: Random Quote
+      Purpose: A lightweight, memorable opening that changes on click.
+      Update: Edit data-quotes with short quotes, jokes, or research reminders.
+      Add entries: Separate each quote with a vertical bar.
     -->
-    <section class="early-hero" id="top" aria-label="Introduction">
-      <div class="early-hero-bg" data-parallax aria-hidden="true"></div>
-      <div class="shell early-hero-layout">
-        <div class="early-hero-copy reveal">
-          <p class="eyebrow">Early PhD researcher | Junior Research Fellow at IIT Ropar</p>
-          <h1>Mudit Sharma</h1>
+    <section class="quote-strip" id="top" aria-label="Random research quote">
+      <div class="shell quote-card">
+        <p data-random-quote data-quotes="Explore first, regret later. Preferably in a theorem.|A bandit problem is just decision-making with suspense.|Today's tiny lemma is tomorrow's politely typeset result.|If the proof is stuck, hydrate the mathematician.|The algorithm is confident. The confidence interval is less impressed.|My research area has arms. None of them help with carrying groceries.|Some days the best baseline is a clean notebook and a second cup of patience.|The best arm is hidden. That feels personal, but we proceed.|I trust the plot, but I still ask for error bars.|Research plan: read, doubt, simulate, repeat.|A clean baseline is self-care for algorithms.|Exploration is curiosity with a budget.|Regret is not failure; it is accounting with opinions.|If all arms look equal, the theorem is either elegant or hiding something.|Good experiments start with boring filenames.|A preference label is a tiny vote from uncertainty.|Online learning exists because data refuses to arrive all at once.|The algorithm explored. The advisor asked for ablations.|A small proof is still a proof. Give it a nice name.|When in doubt, plot the regret curve and breathe.">Explore first, regret later. Preferably in a theorem.</p>
+        <button class="quote-button" type="button" data-random-quote-button>New quote</button>
+      </div>
+    </section>
+
+    <!--
+      SECTION: Hero
+      Purpose: First impression for the long-term personal brand.
+      Update: Replace name, role, short introduction, keywords, social links, and CV link.
+      Add entries: Add more keyword chips inside .keyword-row and more links inside .hero-social.
+    -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" data-parallax aria-hidden="true"></div>
+      <div class="hero-grid shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Research | Teaching | Engineering | Collaboration</p>
+          <h1>Your Name</h1>
+          <p class="role-line">
+            <span>Currently:</span> PhD Student studying bandits, online learning, and preference learning
+          </p>
           <p class="typing-line">
-            I am learning, building, and writing in <span data-typing data-phrases="human-AI systems|multi-armed bandits|dueling bandits|online learning|preference learning|learning theory"></span>
+            I work on <span data-typing data-phrases="multi-armed bandits|dueling bandits|online learning|sequential decision making|learning theory"></span>
           </p>
           <p class="hero-summary">
-            I work at the intersection of human-AI systems, data science, and
-            sequential decision making, with growing interests in bandits,
-            preference feedback, online learning, and learning theory.
+            I study how learning systems make decisions over time when feedback
+            is limited, noisy, comparative, or preference-based.
           </p>
+
           <div class="keyword-row" aria-label="Research keywords">
             <span>Multi-Armed Bandits</span>
             <span>Dueling Bandits</span>
@@ -109,111 +121,91 @@
             <span>Preference Learning</span>
             <span>Learning Theory</span>
           </div>
+
           <div class="hero-actions">
-            <a class="button primary" href="#current-work">Current Work</a>
-            <a class="button secondary" href="cv.html">View CV</a>
+            <a class="button primary" href="cv.html">Download CV</a>
+            <a class="button secondary" href="research-interests.html">Research Interest</a>
+            <a class="button secondary" href="mab-game.html">Play MAB Game</a>
+          </div>
+
+          <div class="hero-social" aria-label="Professional links">
+            <a href="#">Google Scholar</a>
+            <a href="#">ORCID</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
           </div>
         </div>
 
-        <aside class="early-status-card reveal" aria-label="Current academic status">
-          <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Mudit Sharma">
-          <div>
-            <span class="status-pill">Current stage</span>
-            <h2>Early PhD researcher building a foundation.</h2>
+        <aside class="profile-card reveal" aria-label="Profile summary">
+          <div class="portrait-frame">
+            <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Your Name">
+          </div>
+          <div class="profile-card-body">
+            <p class="profile-label">Digital identity</p>
+            <h2>Researcher with a portfolio built for the next decade.</h2>
             <dl class="profile-facts">
               <div>
-                <dt>Program</dt>
-                <dd>Early PhD researcher / Junior Research Fellow</dd>
-              </div>
-              <div>
                 <dt>Affiliation</dt>
-                <dd>IIT Ropar</dd>
+                <dd>[University Name]</dd>
               </div>
               <div>
                 <dt>Advisor</dt>
-                <dd>Dr. Shweta Jain</dd>
+                <dd>Prof. [Advisor Name]</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>[City, Country]</dd>
               </div>
             </dl>
           </div>
         </aside>
       </div>
-    </section>
-
-    <!--
-      SECTION: Current snapshot
-      Purpose: Show progress honestly without publication-style metrics.
-      Update: Adjust each item as your first-year record grows.
-    -->
-    <section class="early-snapshot" aria-label="Current PhD snapshot">
-      <div class="shell snapshot-grid">
-        <article class="snapshot-card reveal">
-          <strong>Year 1</strong>
-          <span>PhD foundation in progress</span>
-        </article>
-        <article class="snapshot-card reveal">
-          <strong>0</strong>
-          <span>Formal publications so far</span>
-        </article>
-        <article class="snapshot-card reveal">
-          <strong>JRF</strong>
-          <span>IIT Ropar research role</span>
-        </article>
-        <article class="snapshot-card reveal">
-          <strong>5</strong>
-          <span>Public ML/data projects from earlier work</span>
-        </article>
-      </div>
+      <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
     </section>
 
     <!--
       SECTION: About
-      Purpose: Short biography suitable for an early PhD student.
-      Update: Add your actual background, program, and intellectual motivation.
+      Purpose: Biography, mission, and professional positioning.
+      Update: Replace the paragraphs and mission statement with your specific story.
     -->
     <section class="section about-section" id="about">
-      <div class="shell early-about-layout">
+      <div class="shell about-layout">
         <div class="about-media reveal">
-          <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Mudit Sharma" loading="lazy">
+          <img src="assets/profile-photo.svg" alt="Professional portrait placeholder for Your Name" loading="lazy">
         </div>
         <div class="about-copy reveal">
-          <p class="section-kicker">About</p>
-          <h2>I am in the stage where questions are becoming a research agenda.</h2>
+          <p class="section-kicker">About Me</p>
+          <h2>Academic foundation, professional ambition, and a research practice built to evolve.</h2>
           <p>
-            I am an early-stage PhD researcher and Junior Research Fellow at IIT
-            Ropar. My current research direction is shaped by human-AI systems,
-            Multi-Armed Bandits, Dueling Bandits, Online Learning, Preference
+            I am a PhD student in [program/department] at [university], working
+            on Multi-Armed Bandits, Dueling Bandits, Online Learning, Preference
             Learning, Sequential Decision Making, and Learning Theory.
           </p>
-          <p>
-            Before this stage, I worked as a Data Engineer at CloudEQ and built
-            projects in machine learning, computer vision, dashboards, and
-            recommendation systems. I do not yet list formal publications here;
-            this site highlights research in progress, archived notes, projects,
-            and preparation for future papers.
-          </p>
           <blockquote>
-            Current focus: integrating human expertise with AI, turning early
-            bandit/preference-learning ideas into precise problems, and building
-            reproducible experiments for future manuscripts.
+            My research mission is to understand how algorithms should explore,
+            compare, learn preferences, and make reliable decisions under
+            uncertainty. In plain language: I study how to make good choices
+            before the universe has finished explaining itself.
           </blockquote>
         </div>
       </div>
     </section>
 
     <!--
-      SECTION: Research Interests
-      Purpose: Explain bandit research visually for non-specialist visitors.
-      Update: Keep these visuals short and concept-focused.
+      SECTION: Area of Research
+      Purpose: Explain bandits, online learning, preference learning, and learning theory with compact visuals.
+      Update: Edit card titles, captions, and graph node labels as your research scope changes.
+      Add entries: Add another .visual-card and keep SVG text short for mobile readability.
     -->
     <section class="section interests-section" id="interests">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Research Interests</p>
-          <h2>How should an algorithm learn while it is still making decisions?</h2>
+          <p class="section-kicker">Area of Research</p>
+          <h2>Learning by trying, comparing, and adapting.</h2>
           <p>
-            Bandit and online learning problems study the tension between trying
-            uncertain actions, using what already looks best, and learning from
-            limited feedback.
+            My work studies decision-making systems that must learn from partial
+            feedback: choosing actions, comparing alternatives, and improving
+            policies while uncertainty remains.
           </p>
         </div>
 
@@ -221,27 +213,47 @@
           <article class="visual-card bandit-visual reveal" aria-labelledby="bandit-title">
             <div class="visual-card-copy">
               <span class="mini-label">Multi-Armed Bandits</span>
-              <h3 id="bandit-title">Choose, observe, update.</h3>
-              <p>Each action gives feedback only for the option selected.</p>
+              <h3 id="bandit-title">Pick an arm, observe a reward, learn the best choice.</h3>
+              <p>Each pull gives only partial feedback, so the algorithm must learn from experience.</p>
             </div>
-            <svg class="bandit-svg" viewBox="0 0 360 190" role="img" aria-label="Animated multi-armed bandit machine">
+            <svg class="bandit-svg" viewBox="0 0 360 190" role="img" aria-label="Animated four-arm bandit machine with reward signals">
               <rect class="machine-body" x="38" y="30" width="284" height="132" rx="18"></rect>
-              <g class="bandit-arm arm-one"><line x1="96" y1="72" x2="96" y2="128"></line><circle cx="96" cy="60" r="17"></circle><rect x="76" y="128" width="40" height="18" rx="6"></rect></g>
-              <g class="bandit-arm arm-two"><line x1="152" y1="72" x2="152" y2="128"></line><circle cx="152" cy="60" r="17"></circle><rect x="132" y="128" width="40" height="18" rx="6"></rect></g>
-              <g class="bandit-arm arm-three best-arm"><line x1="208" y1="72" x2="208" y2="128"></line><circle cx="208" cy="60" r="17"></circle><rect x="188" y="128" width="40" height="18" rx="6"></rect></g>
-              <g class="bandit-arm arm-four"><line x1="264" y1="72" x2="264" y2="128"></line><circle cx="264" cy="60" r="17"></circle><rect x="244" y="128" width="40" height="18" rx="6"></rect></g>
-              <g class="reward-dots"><circle cx="208" cy="36" r="4"></circle><circle cx="225" cy="24" r="4"></circle><circle cx="191" cy="23" r="4"></circle></g>
-              <text x="180" y="178" text-anchor="middle">partial feedback, one decision at a time</text>
+              <g class="bandit-arm arm-one">
+                <line x1="96" y1="72" x2="96" y2="128"></line>
+                <circle cx="96" cy="60" r="17"></circle>
+                <rect x="76" y="128" width="40" height="18" rx="6"></rect>
+              </g>
+              <g class="bandit-arm arm-two">
+                <line x1="152" y1="72" x2="152" y2="128"></line>
+                <circle cx="152" cy="60" r="17"></circle>
+                <rect x="132" y="128" width="40" height="18" rx="6"></rect>
+              </g>
+              <g class="bandit-arm arm-three best-arm">
+                <line x1="208" y1="72" x2="208" y2="128"></line>
+                <circle cx="208" cy="60" r="17"></circle>
+                <rect x="188" y="128" width="40" height="18" rx="6"></rect>
+              </g>
+              <g class="bandit-arm arm-four">
+                <line x1="264" y1="72" x2="264" y2="128"></line>
+                <circle cx="264" cy="60" r="17"></circle>
+                <rect x="244" y="128" width="40" height="18" rx="6"></rect>
+              </g>
+              <g class="reward-dots">
+                <circle cx="208" cy="36" r="4"></circle>
+                <circle cx="225" cy="24" r="4"></circle>
+                <circle cx="191" cy="23" r="4"></circle>
+              </g>
+              <text x="180" y="178" text-anchor="middle">reward feedback arrives one pull at a time</text>
             </svg>
           </article>
 
           <article class="visual-card explore-visual reveal" data-explore-card aria-labelledby="explore-title">
             <div class="visual-card-copy">
               <span class="mini-label">Exploration vs Exploitation</span>
-              <h3 id="explore-title">Try something uncertain or use the current best?</h3>
-              <p data-explore-caption>Move the control to see the policy shift.</p>
+              <h3 id="explore-title">Should we test a new option or use what seems best?</h3>
+              <p data-explore-caption>Move the control to see the decision policy shift.</p>
             </div>
-            <svg class="explore-svg" viewBox="0 0 360 170" role="img" aria-label="Interactive exploration versus exploitation balance">
+            <svg class="explore-svg" viewBox="0 0 360 170" role="img" aria-label="Interactive balance between exploration and exploitation">
               <line class="balance-track" x1="58" y1="82" x2="302" y2="82"></line>
               <circle class="balance-node explore-node" cx="76" cy="82" r="28"></circle>
               <circle class="balance-node exploit-node" cx="284" cy="82" r="28"></circle>
@@ -260,17 +272,28 @@
           <article class="visual-card duel-visual reveal" aria-labelledby="duel-title">
             <div class="visual-card-copy">
               <span class="mini-label">Dueling Bandits</span>
-              <h3 id="duel-title">Sometimes feedback is a comparison, not a score.</h3>
-              <p>Pairwise preferences help learn which option is better.</p>
+              <h3 id="duel-title">Learn from pairwise preferences instead of numeric scores.</h3>
+              <p>Two actions are compared; the winner updates the learner's belief about preference.</p>
             </div>
-            <svg class="duel-svg" viewBox="0 0 360 190" role="img" aria-label="Animated dueling bandit comparison">
-              <g class="duel-option option-a"><rect x="40" y="52" width="102" height="86" rx="14"></rect><text x="91" y="91" text-anchor="middle">A</text><text x="91" y="120" text-anchor="middle">policy</text></g>
-              <g class="duel-option option-b"><rect x="218" y="52" width="102" height="86" rx="14"></rect><text x="269" y="91" text-anchor="middle">B</text><text x="269" y="120" text-anchor="middle">policy</text></g>
+            <svg class="duel-svg" viewBox="0 0 360 190" role="img" aria-label="Animated pairwise comparison between two options">
+              <g class="duel-option option-a">
+                <rect x="40" y="52" width="102" height="86" rx="14"></rect>
+                <text x="91" y="91" text-anchor="middle">A</text>
+                <text x="91" y="120" text-anchor="middle">policy</text>
+              </g>
+              <g class="duel-option option-b">
+                <rect x="218" y="52" width="102" height="86" rx="14"></rect>
+                <text x="269" y="91" text-anchor="middle">B</text>
+                <text x="269" y="120" text-anchor="middle">policy</text>
+              </g>
               <circle class="vs-orb" cx="180" cy="95" r="25"></circle>
               <text class="vs-text" x="180" y="101" text-anchor="middle">vs</text>
               <path class="preference-flow flow-a" d="M154 82C170 65 190 65 206 82"></path>
               <path class="preference-flow flow-b" d="M206 113C190 132 170 132 154 113"></path>
-              <g class="winner-badge"><circle cx="269" cy="43" r="13"></circle><path d="M262 43l5 5 10-11"></path></g>
+              <g class="winner-badge">
+                <circle cx="269" cy="43" r="13"></circle>
+                <path d="M262 43l5 5 10-11"></path>
+              </g>
               <text x="180" y="168" text-anchor="middle">feedback: B is preferred to A</text>
             </svg>
           </article>
@@ -278,19 +301,50 @@
           <article class="visual-card network-visual reveal" aria-labelledby="network-title">
             <div class="visual-card-copy">
               <span class="mini-label">Research Map</span>
-              <h3 id="network-title">The ideas I am connecting.</h3>
-              <p>Bandits connect naturally to preferences, online learning, reinforcement learning, and theory.</p>
+              <h3 id="network-title">A connected view of my research area.</h3>
+              <p>Bandits sit at the intersection of sequential decisions, preferences, online learning, and theory.</p>
             </div>
-            <svg class="network-svg" viewBox="0 0 420 260" role="img" aria-label="Research network graph">
+            <svg class="network-svg" viewBox="0 0 420 260" role="img" aria-label="Network graph connecting bandits, online learning, reinforcement learning, preference learning, and learning theory">
               <g class="network-links">
-                <line x1="210" y1="128" x2="82" y2="70"></line><line x1="210" y1="128" x2="92" y2="190"></line><line x1="210" y1="128" x2="338" y2="68"></line><line x1="210" y1="128" x2="335" y2="190"></line><line x1="210" y1="128" x2="210" y2="36"></line><line x1="82" y1="70" x2="210" y2="36"></line><line x1="92" y1="190" x2="335" y2="190"></line><line x1="338" y1="68" x2="335" y2="190"></line>
+                <line x1="210" y1="128" x2="82" y2="70"></line>
+                <line x1="210" y1="128" x2="92" y2="190"></line>
+                <line x1="210" y1="128" x2="338" y2="68"></line>
+                <line x1="210" y1="128" x2="335" y2="190"></line>
+                <line x1="210" y1="128" x2="210" y2="36"></line>
+                <line x1="82" y1="70" x2="210" y2="36"></line>
+                <line x1="92" y1="190" x2="335" y2="190"></line>
+                <line x1="338" y1="68" x2="335" y2="190"></line>
               </g>
-              <g class="network-node central-node"><circle cx="210" cy="128" r="34"></circle><text x="210" y="123" text-anchor="middle">Multi-Armed</text><text x="210" y="139" text-anchor="middle">Bandits</text></g>
-              <g class="network-node"><circle cx="82" cy="70" r="29"></circle><text x="82" y="66" text-anchor="middle">Dueling</text><text x="82" y="82" text-anchor="middle">Bandits</text></g>
-              <g class="network-node"><circle cx="92" cy="190" r="30"></circle><text x="92" y="186" text-anchor="middle">Preference</text><text x="92" y="202" text-anchor="middle">Learning</text></g>
-              <g class="network-node"><circle cx="338" cy="68" r="31"></circle><text x="338" y="64" text-anchor="middle">Online</text><text x="338" y="80" text-anchor="middle">Learning</text></g>
-              <g class="network-node"><circle cx="335" cy="190" r="34"></circle><text x="335" y="186" text-anchor="middle">Reinforcement</text><text x="335" y="202" text-anchor="middle">Learning</text></g>
-              <g class="network-node"><circle cx="210" cy="36" r="30"></circle><text x="210" y="32" text-anchor="middle">Learning</text><text x="210" y="48" text-anchor="middle">Theory</text></g>
+              <g class="network-node central-node">
+                <circle cx="210" cy="128" r="34"></circle>
+                <text x="210" y="123" text-anchor="middle">Multi-Armed</text>
+                <text x="210" y="139" text-anchor="middle">Bandits</text>
+              </g>
+              <g class="network-node">
+                <circle cx="82" cy="70" r="29"></circle>
+                <text x="82" y="66" text-anchor="middle">Dueling</text>
+                <text x="82" y="82" text-anchor="middle">Bandits</text>
+              </g>
+              <g class="network-node">
+                <circle cx="92" cy="190" r="30"></circle>
+                <text x="92" y="186" text-anchor="middle">Preference</text>
+                <text x="92" y="202" text-anchor="middle">Learning</text>
+              </g>
+              <g class="network-node">
+                <circle cx="338" cy="68" r="31"></circle>
+                <text x="338" y="64" text-anchor="middle">Online</text>
+                <text x="338" y="80" text-anchor="middle">Learning</text>
+              </g>
+              <g class="network-node">
+                <circle cx="335" cy="190" r="34"></circle>
+                <text x="335" y="186" text-anchor="middle">Reinforcement</text>
+                <text x="335" y="202" text-anchor="middle">Learning</text>
+              </g>
+              <g class="network-node">
+                <circle cx="210" cy="36" r="30"></circle>
+                <text x="210" y="32" text-anchor="middle">Learning</text>
+                <text x="210" y="48" text-anchor="middle">Theory</text>
+              </g>
             </svg>
           </article>
         </div>
@@ -298,125 +352,74 @@
     </section>
 
     <!--
-      SECTION: Current Work
-      Purpose: Show active directions without pretending they are finished papers.
-      Update: Replace cards with your real project ideas, status, and next steps.
+      SECTION: Publications
+      Purpose: Published papers, under-review manuscripts, and working papers.
+      Update: Edit data-status and data-year values so filters work correctly.
+      Add entries: Copy one .publication item and update title, authors, venue, year, and links.
     -->
-    <section class="section current-work-section" id="current-work">
+    <section class="section publications-section" id="publications">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Current Work</p>
-          <h2>Research ideas I am actively shaping.</h2>
-          <p>
-            These are not formal publications yet. They are active directions,
-            drafts, experiments, and questions being refined into future manuscripts.
-          </p>
+          <p class="section-kicker">Publications</p>
+          <h2>Published, under review, and in preparation.</h2>
         </div>
 
-        <div class="early-work-grid">
-          <article class="early-work-card reveal">
-            <span class="status-pill">Active research role</span>
-            <h3>Integrating human expertise with AI</h3>
-            <p>
-              As a Junior Research Fellow at IIT Ropar, I work on questions
-              around improving the combined performance of human and AI systems.
-            </p>
-            <ul class="meta-list">
-              <li>Guided by Dr. Shweta Jain</li>
-              <li>Connected to a SERB-CRG research project</li>
-            </ul>
-          </article>
-          <article class="early-work-card reveal">
-            <span class="status-pill">Idea in progress</span>
-            <h3>Bandits, preference feedback, and online learning</h3>
-            <p>
-              I am shaping early problems around how algorithms should learn
-              from partial feedback, pairwise comparisons, and sequential choices.
-            </p>
-            <ul class="meta-list">
-              <li>Current stage: reading, problem formulation, early notes</li>
-              <li>Next step: define assumptions and baseline algorithms</li>
-            </ul>
-          </article>
-          <article class="early-work-card reveal">
-            <span class="status-pill">Implementation</span>
-            <h3>Simulation and reproducibility setup</h3>
-            <p>
-              A codebase for testing bandit algorithms, comparing baselines, and
-              keeping experiments reproducible from the beginning.
-            </p>
-            <ul class="meta-list">
-              <li>Tools: Python, Jupyter, NumPy, Pandas, Git</li>
-              <li>Next step: document metrics, plots, and experiment logs</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      SECTION: Archive
-      Purpose: Replace a formal publication list with honest archived work and drafts.
-      Update: Add arXiv links, technical reports, notes, posters, or private draft descriptions.
-      Add entries: Copy .archive-item and set a clear status label.
-    -->
-    <section class="section archive-section" id="archive">
-      <div class="shell">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Archive and Drafts</p>
-          <h2>Work I can point to before formal publications.</h2>
-          <p>
-            This section is intentionally not called “Publications.” It is for
-            arXiv versions, working notes, technical reports, reproducible code,
-            posters, and drafts that show genuine progress.
-          </p>
+        <div class="filter-bar reveal" aria-label="Publication filters">
+          <div class="filter-group" role="group" aria-label="Filter by status">
+            <button class="filter-button active" type="button" data-publication-filter="all">All</button>
+            <button class="filter-button" type="button" data-publication-filter="published">Published</button>
+            <button class="filter-button" type="button" data-publication-filter="review">Under Review</button>
+            <button class="filter-button" type="button" data-publication-filter="working">Working Papers</button>
+          </div>
+          <div class="filter-group" role="group" aria-label="Filter by year">
+            <button class="filter-button active" type="button" data-year-filter="all">All Years</button>
+            <button class="filter-button" type="button" data-year-filter="2026">2026</button>
+            <button class="filter-button" type="button" data-year-filter="2025">2025</button>
+          </div>
         </div>
 
-        <div class="archive-list">
-          <article class="archive-item reveal">
-            <div class="archive-date">2026</div>
-            <div>
-              <span class="status-pill">Archived / Draft</span>
-              <h3>[Archived Work Title]</h3>
-              <p>
-                Short description of the problem, what you tried, and what is
-                still incomplete. Add an arXiv, OSF, GitHub, or PDF link when ready.
-              </p>
+        <div class="publication-list" data-publication-list>
+          <article class="publication reveal" data-status="published" data-year="2026">
+            <div class="pub-index">2026</div>
+            <div class="pub-body">
+              <span class="status-pill">Published</span>
+              <h3>[Paper Title].</h3>
+              <p><strong>Your Name</strong>, Coauthor One, Coauthor Two.</p>
+              <p><em>[Journal / Conference Name]</em>. DOI: [doi-link]</p>
               <div class="pub-links">
-                <a href="#">arXiv / PDF</a>
+                <a href="#">PDF</a>
+                <a href="#">Citation</a>
                 <a href="#">Code</a>
-                <a href="#">Notes</a>
+                <a href="#">Dataset</a>
               </div>
             </div>
           </article>
 
-          <article class="archive-item reveal">
-            <div class="archive-date">2026</div>
-            <div>
-              <span class="status-pill">Working Notes</span>
-              <h3>[Reading / Theory Notes Topic]</h3>
-              <p>
-                Use this for polished notes from a reading course, theorem
-                sketches, literature maps, or a small explanatory writeup.
-              </p>
+          <article class="publication reveal" data-status="review" data-year="2026">
+            <div class="pub-index">2026</div>
+            <div class="pub-body">
+              <span class="status-pill">Under Review</span>
+              <h3>[Manuscript Title].</h3>
+              <p><strong>Your Name</strong>, Coauthor One.</p>
+              <p>Submitted to <em>[Journal / Conference Name]</em>.</p>
               <div class="pub-links">
-                <a href="#">Notes</a>
-                <a href="#">BibTeX / Reading List</a>
+                <a href="#">Preprint</a>
+                <a href="#">Citation</a>
+                <a href="#">Supplement</a>
               </div>
             </div>
           </article>
 
-          <article class="archive-item reveal">
-            <div class="archive-date">Future</div>
-            <div>
-              <span class="status-pill">Publication pipeline</span>
-              <h3>Formal publications will appear here when ready.</h3>
-              <p>
-                Once a manuscript is submitted, accepted, or published, move it
-                from this archive into the fuller publication-style website.
-              </p>
+          <article class="publication reveal" data-status="working" data-year="2025">
+            <div class="pub-index">2025</div>
+            <div class="pub-body">
+              <span class="status-pill">Working Paper</span>
+              <h3>[Working Paper Title].</h3>
+              <p><strong>Your Name</strong>.</p>
+              <p>Draft in preparation for [venue / dissertation chapter].</p>
               <div class="pub-links">
-                <a href="future-profile.html">View future profile template</a>
+                <a href="#">Abstract</a>
+                <a href="#">Project Page</a>
               </div>
             </div>
           </article>
@@ -426,43 +429,40 @@
 
     <!--
       SECTION: Coursework
-      Purpose: First-year PhD students often have coursework as meaningful evidence of preparation.
-      Update: Replace with completed first-year courses and reading groups.
+      Purpose: Completed coursework grouped by training area.
+      Update: Replace course names, codes, and semesters.
+      Add entries: Copy an li inside the right category, or add a new .course-column.
     -->
     <section class="section coursework-section" id="coursework">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Coursework and Preparation</p>
-          <h2>First-year foundation.</h2>
-          <p>
-            Coursework matters at this stage. This section shows the training
-            that is shaping the research agenda.
-          </p>
+          <p class="section-kicker">Coursework</p>
+          <h2>Formal training across theory, methods, and specialized seminars.</h2>
         </div>
 
         <div class="course-grid">
           <article class="course-column reveal">
-            <h3>Core Theory</h3>
+            <h3>Core Courses</h3>
             <ul class="course-list">
-              <li><strong>[Course Code]</strong><span>[Algorithms / Probability / Optimization] | [Semester, Year]</span></li>
-              <li><strong>[Course Code]</strong><span>[Learning Theory / Statistical Learning] | [Semester, Year]</span></li>
-              <li><strong>[Reading]</strong><span>Bandit algorithms and online learning foundations</span></li>
+              <li><strong>[Course Code]</strong><span>[Course Name] | [Semester, Year]</span></li>
+              <li><strong>[Course Code]</strong><span>[Course Name] | [Semester, Year]</span></li>
+              <li><strong>[Course Code]</strong><span>[Course Name] | [Semester, Year]</span></li>
             </ul>
           </article>
           <article class="course-column reveal">
-            <h3>Methods</h3>
+            <h3>Methods Courses</h3>
             <ul class="course-list">
+              <li><strong>[Course Code]</strong><span>[Quantitative / Qualitative Methods]</span></li>
               <li><strong>[Course Code]</strong><span>[Statistics / Machine Learning]</span></li>
-              <li><strong>[Course Code]</strong><span>[Stochastic Processes / Decision Making]</span></li>
-              <li><strong>[Practice]</strong><span>Simulation, evaluation, and reproducible experiments</span></li>
+              <li><strong>[Course Code]</strong><span>[Research Design / Lab Methods]</span></li>
             </ul>
           </article>
           <article class="course-column reveal">
-            <h3>Research Habits</h3>
+            <h3>Specialized Seminars</h3>
             <ul class="course-list">
-              <li><strong>Reading</strong><span>Paper summaries and literature maps</span></li>
-              <li><strong>Writing</strong><span>Technical notes, proofs, and problem statements</span></li>
-              <li><strong>Building</strong><span>Code notebooks and experiment scaffolds</span></li>
+              <li><strong>[Course Code]</strong><span>[Advanced Seminar Name]</span></li>
+              <li><strong>[Course Code]</strong><span>[Advanced Seminar Name]</span></li>
+              <li><strong>[Course Code]</strong><span>[Reading Group / Independent Study]</span></li>
             </ul>
           </article>
         </div>
@@ -470,119 +470,154 @@
     </section>
 
     <!--
-      SECTION: Toolkit
-      Purpose: A modest current toolkit, not an exaggerated expert profile.
-      Update: Adjust data-level values conservatively as your confidence grows.
+      SECTION: Teaching Assistant Timeline
+      Purpose: Timeline of TA roles, instructors, subjects, and responsibilities.
+      Update: Replace course names, instructor names, semesters, and duties.
+      Add entries: Copy one .timeline-item and update data-step in sequence.
     -->
-    <section class="section skills-section" id="toolkit">
+    <section class="section teaching-section timeline-section" id="teaching">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Toolkit</p>
-          <h2>Tools I am using and strengthening.</h2>
+          <p class="section-kicker">Teaching Assistant Timeline</p>
+          <h2>Courses I helped teach, and the people I learned teaching from.</h2>
           <p>
-            This is a working toolkit: enough to build simulations, read theory,
-            write reproducible notes, and turn early ideas into research.
+            Use this timeline to record under whom you served as a TA, what
+            subject you supported, and what kind of student-facing work you did.
           </p>
         </div>
 
-        <div class="toolkit-console reveal" aria-label="Current research toolkit">
-          <div class="toolkit-status">
-            <span class="signal-dot"></span>
-            <span>Current toolkit</span>
-            <strong>Learning + building + documenting</strong>
-          </div>
-
-          <div class="skills-grid">
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head"><span>01</span><h3>Programming</h3></div>
-              <div class="skill-meter" data-level="72"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">Python</button>
-                <button class="skill-badge" type="button">R</button>
-                <button class="skill-badge" type="button">SQL</button>
-                <button class="skill-badge" type="button">Git</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head"><span>02</span><h3>Bandit Algorithms</h3></div>
-              <div class="skill-meter" data-level="62"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">UCB</button>
-                <button class="skill-badge" type="button">Thompson Sampling</button>
-                <button class="skill-badge" type="button">Dueling Bandits</button>
-                <button class="skill-badge" type="button">Regret</button>
-              </div>
-            </article>
-            <article class="skill-category toolkit-module reveal" data-skill-module>
-              <div class="module-head"><span>03</span><h3>Research Writing</h3></div>
-              <div class="skill-meter" data-level="66"><span></span></div>
-              <div class="skill-badges">
-                <button class="skill-badge" type="button">LaTeX</button>
-                <button class="skill-badge" type="button">Zotero</button>
-                <button class="skill-badge" type="button">Proof Notes</button>
-                <button class="skill-badge" type="button">Reading Maps</button>
-              </div>
-            </article>
-          </div>
+        <div class="journey-timeline" aria-label="Teaching assistant timeline">
+          <article class="timeline-item reveal" data-step="TA1">
+            <time>[Fall 2025]</time>
+            <h3>[Subject / Course Name]</h3>
+            <p><strong>Instructor:</strong> Prof. [Instructor Name]. Responsibilities: tutorials, office hours, assignment support, and grading coordination.</p>
+          </article>
+          <article class="timeline-item reveal" data-step="TA2">
+            <time>[Spring 2025]</time>
+            <h3>[Subject / Course Name]</h3>
+            <p><strong>Instructor:</strong> Prof. [Instructor Name]. Responsibilities: labs, recitations, doubt sessions, and course platform feedback.</p>
+          </article>
+          <article class="timeline-item reveal" data-step="TA3">
+            <time>[Future]</time>
+            <h3>[Upcoming TA Role]</h3>
+            <p><strong>Instructor:</strong> [Instructor Name]. Add the course once confirmed. Tiny reminder: grading is temporary, pedagogy is forever.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!--
-      SECTION: Timeline
-      Purpose: Show a realistic early PhD trajectory.
-      Update: Add milestones such as coursework, qualifying exam, advisor match, proposal.
+      SECTION: Collaborators
+      Purpose: Faculty, industry, student, and research-group collaborators.
+      Update: Replace names, affiliations, positions, topics, and website links.
+      Add entries: Copy .collaborator-card into the correct category group.
     -->
-    <section class="section timeline-section" id="timeline">
+    <section class="section collaborators-section" id="collaborators">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="section-kicker">Timeline</p>
-          <h2>Where I am in the PhD process.</h2>
+          <p class="section-kicker">Collaborators</p>
+          <h2>People and groups shaping the work.</h2>
+          <p>Research is a shared practice. This section can grow into a map of collaborators, mentors, students, labs, and industry partners.</p>
         </div>
-        <div class="journey-timeline" aria-label="Early PhD timeline">
-          <article class="timeline-item reveal" data-step="01">
-            <time>[Year]</time>
-            <h3>Started PhD</h3>
-            <p>Began doctoral training in [department / field] at [university].</p>
-          </article>
-          <article class="timeline-item reveal" data-step="02">
-            <time>[Year]</time>
-            <h3>Completed first year</h3>
-            <p>Finished core coursework, initial reading, and early project exploration.</p>
-          </article>
-          <article class="timeline-item reveal" data-step="03">
-            <time>Now</time>
-            <h3>Research direction forming</h3>
-            <p>Developing ideas in bandits, online learning, preference learning, and theory.</p>
-          </article>
-          <article class="timeline-item reveal" data-step="04">
-            <time>Next</time>
-            <h3>Turn drafts into manuscripts</h3>
-            <p>Refine archived work into formal submissions when the results are mature.</p>
-          </article>
+
+        <div class="collaborator-category reveal">
+          <h3>Faculty Collaborators</h3>
+          <div class="collaborator-grid">
+            <article class="collaborator-card">
+              <img src="assets/collaborator-placeholder.svg" alt="Faculty collaborator placeholder portrait" loading="lazy">
+              <div>
+                <h4>Prof. [Name]</h4>
+                <p>[Position], [Affiliation]</p>
+                <span>[Collaboration Topic]</span>
+                <a href="#">Website</a>
+              </div>
+            </article>
+            <article class="collaborator-card">
+              <img src="assets/collaborator-placeholder.svg" alt="Faculty collaborator placeholder portrait" loading="lazy">
+              <div>
+                <h4>Dr. [Name]</h4>
+                <p>[Position], [Affiliation]</p>
+                <span>[Collaboration Topic]</span>
+                <a href="#">Website</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="collaborator-category reveal">
+          <h3>Industry Collaborators</h3>
+          <div class="collaborator-grid">
+            <article class="collaborator-card">
+              <img src="assets/collaborator-placeholder.svg" alt="Industry collaborator placeholder portrait" loading="lazy">
+              <div>
+                <h4>[Collaborator Name]</h4>
+                <p>[Position], [Company / Lab]</p>
+                <span>[Collaboration Topic]</span>
+                <a href="#">Website</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="collaborator-category reveal">
+          <h3>Student Collaborators</h3>
+          <div class="collaborator-grid">
+            <article class="collaborator-card">
+              <img src="assets/collaborator-placeholder.svg" alt="Student collaborator placeholder portrait" loading="lazy">
+              <div>
+                <h4>[Student Name]</h4>
+                <p>[Program / Role], [Affiliation]</p>
+                <span>[Collaboration Topic]</span>
+                <a href="#">Website</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="collaborator-category reveal">
+          <h3>Research Groups</h3>
+          <div class="group-grid">
+            <article class="group-card">
+              <h4>[Lab / Research Group]</h4>
+              <p>[University / Organization]. Work together on [topic or project].</p>
+              <a href="#">Group Website</a>
+            </article>
+            <article class="group-card">
+              <h4>[Reading Group / Center]</h4>
+              <p>Community for [seminars, shared datasets, workshops, or methods].</p>
+              <a href="#">Group Website</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!--
       SECTION: Gallery Preview
-      Purpose: Keep personal/life visuals separate from the research-focused homepage.
+      Purpose: Keep the homepage focused while linking to the full dedicated gallery page.
+      Update: Replace preview image/captions or remove this section if you want Gallery only in the header.
+      Add entries: Keep this compact; the full categorized gallery lives in gallery.html.
     -->
     <section class="section gallery-preview-section" id="life">
       <div class="shell">
         <div class="gallery-preview-card reveal">
           <div class="gallery-preview-copy">
             <p class="section-kicker">Gallery</p>
-            <h2>Life outside the formal CV lives on a separate page.</h2>
+            <h2>Research life, travel, conferences, and personal interests have their own page.</h2>
             <p>
-              Keep conference photos, research snapshots, travel, and personal
-              interests separate from the research-focused homepage.
+              I moved the full gallery out of the homepage so this page stays
+              focused on area of research, publications, coursework, teaching,
+              collaborators, and contact.
             </p>
             <a class="button primary" href="gallery.html">Open Gallery</a>
           </div>
           <div class="gallery-preview-stack" aria-hidden="true">
-            <figure><img src="assets/research-workspace.png" alt=""></figure>
-            <span>Research</span><span>Travel</span><span>Notes</span>
+            <figure>
+              <img src="assets/research-workspace.png" alt="">
+            </figure>
+            <span>Conferences</span>
+            <span>Research</span>
+            <span>Travel</span>
           </div>
         </div>
       </div>
@@ -590,53 +625,423 @@
 
     <!--
       SECTION: Contact
-      Purpose: Simple ways to connect.
-      Update: Replace email and social links.
+      Purpose: Static contact details for GitHub Pages or any other static host.
+      Update: Replace lab address, email, and profile links. No phone number is included.
+      Add entries: Copy one .contact-card for more professional profiles or office details.
     -->
     <section class="section contact-section" id="contact">
       <div class="shell contact-layout">
         <div class="contact-copy reveal">
           <p class="section-kicker">Contact</p>
-          <h2>Happy to connect about bandits, online learning, and early research ideas.</h2>
+          <h2>Collaborations, talks, research ideas, and professional opportunities.</h2>
           <p>
-            I welcome reading suggestions, collaboration conversations, and
-            pointers to relevant work in bandits, preferences, and learning theory.
+            I welcome conversations about research, teaching, technical projects,
+            mentoring, consulting, and future collaborations.
           </p>
-          <div class="contact-links">
-            <a href="mailto:muditsharmaldh@gmail.com" data-email>muditsharmaldh@gmail.com</a>
-            <a href="#">GitHub</a>
-            <a href="#">Google Scholar</a>
-            <a href="#">ORCID</a>
-            <a href="#">LinkedIn</a>
-          </div>
           <button class="button secondary copy-email" type="button" data-copy-email>Copy Email</button>
         </div>
 
-        <form class="contact-form reveal" data-contact-form>
-          <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name"></label>
-          <label>Email<input type="email" name="email" autocomplete="email" placeholder="your.email@example.com"></label>
-          <label>
-            Topic
-            <select name="topic">
-              <option>Reading suggestion</option>
-              <option>Research conversation</option>
-              <option>Collaboration idea</option>
-              <option>Coursework / teaching</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label>Message<textarea name="message" rows="5" placeholder="Write a short message"></textarea></label>
-          <button class="button primary" type="submit">Start Email</button>
-          <p class="form-note" data-form-note>This static form opens your email app with the message prepared.</p>
-        </form>
+        <div class="contact-card-grid reveal" aria-label="Contact details">
+          <article class="contact-card">
+            <span>Email</span>
+            <h3>Gmail / Academic Email</h3>
+            <a href="mailto:your.email@gmail.com" data-email>your.email@gmail.com</a>
+          </article>
+          <article class="contact-card">
+            <span>Lab Address</span>
+            <h3>[Lab / Department Name]</h3>
+            <p>[Building Name], [Room Number], [University Name], [City, Country]</p>
+          </article>
+          <article class="contact-card">
+            <span>Professional</span>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/your-profile/">linkedin.com/in/your-profile</a>
+          </article>
+          <article class="contact-card">
+            <span>Code</span>
+            <h3>GitHub</h3>
+            <a href="https://github.com/your-username">github.com/your-username</a>
+          </article>
+          <article class="contact-card">
+            <span>Research Profiles</span>
+            <h3>Scholar / ORCID</h3>
+            <div class="contact-mini-links">
+              <a href="#">Google Scholar</a>
+              <a href="#">ORCID</a>
+            </div>
+          </article>
+          <article class="contact-card">
+            <span>Best For</span>
+            <h3>Research conversations</h3>
+            <p>Bandits, online learning, preference learning, teaching, and collaboration ideas.</p>
+          </article>
+        </div>
       </div>
     </section>
+
+    <div id="future-sections-root"></div>
+
+    <template id="future-sections-template">
+      <!--
+        FUTURE SECTION: Awards and Honors
+        Enable this section when you receive awards, grants, fellowships, best-paper recognitions, travel awards, or academic honors.
+        Update: Replace title, organization, year, and description.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="awards" data-future-section="awards">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Awards</p>
+            <h2>Awards and Honors</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Year]</span>
+              <h3>[Award / Fellowship Name]</h3>
+              <p>[Organization]. Brief context about the recognition.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Grants and Funding
+        Enable this section when you receive grants, scholarships, seed funding, sponsored research support, or project funding.
+        Update: Add funding source, amount if public, role, dates, and project title.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="grants" data-future-section="grants">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Funding</p>
+            <h2>Grants and Funding</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Year]</span>
+              <h3>[Grant / Fellowship Title]</h3>
+              <p>Role: [PI / Co-PI / Fellow]. Project: [project title].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Invited Talks
+        Enable this section when you give invited seminars, guest lectures, tutorials, webinars, or keynote-style talks.
+        Update: Add talk title, host, location, and date.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="invited-talks" data-future-section="invited-talks">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Talks</p>
+            <h2>Invited Talks</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Date]</span>
+              <h3>[Talk Title]</h3>
+              <p>[Host Institution / Event]. [City or online].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Conference Presentations
+        Enable this section when you present posters, talks, demos, tutorials, or workshop papers at conferences.
+        Update: Add presentation title, venue, format, and year.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="conference-presentations" data-future-section="conference-presentations">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Presentations</p>
+            <h2>Conference Presentations</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Year]</span>
+              <h3>[Presentation Title]</h3>
+              <p>[Conference Name]. Format: [oral / poster / demo / workshop].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Open Source Projects
+        Enable this section when you publish reusable software, libraries, templates, tools, or public repositories.
+        Update: Add repository link, status, technologies, and impact.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="open-source" data-future-section="open-source">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Open Source</p>
+            <h2>Open Source Projects</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Technology]</span>
+              <h3>[Repository / Project Name]</h3>
+              <p>Reusable tool for [purpose]. <a href="#">Repository</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Research Software
+        Enable this section when you release research software, analysis pipelines, simulation tools, dashboards, or reproducibility packages.
+        Update: Add software name, DOI or repository, documentation, and use case.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="research-software" data-future-section="research-software">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Software</p>
+            <h2>Research Software</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Version / Year]</span>
+              <h3>[Software Name]</h3>
+              <p>Software for [analysis, simulation, data collection, or visualization].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Datasets
+        Enable this section when you publish datasets, benchmarks, annotations, codebooks, or public data resources.
+        Update: Add dataset name, repository, DOI, license, and citation.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="datasets" data-future-section="datasets">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Data</p>
+            <h2>Datasets</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[License]</span>
+              <h3>[Dataset Name]</h3>
+              <p>Dataset for [research task]. DOI / repository: <a href="#">Link</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Students Mentored
+        Enable this section when you mentor undergraduate students, master's students, interns, or junior researchers.
+        Update: Add student name, role, project, period, and outcome if public.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="students-mentored" data-future-section="students-mentored">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Mentoring</p>
+            <h2>Students Mentored</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Year]</span>
+              <h3>[Student Name]</h3>
+              <p>Project: [project title]. Outcome: [poster, paper, thesis, internship].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Professional Experience
+        Enable this section when you add internships, postdoctoral roles, industry positions, consulting work, faculty roles, or entrepreneurship.
+        Update: Add organization, role, dates, responsibilities, and outcomes.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="experience" data-future-section="experience">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Experience</p>
+            <h2>Professional Experience</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Dates]</span>
+              <h3>[Role], [Organization]</h3>
+              <p>Built, researched, led, advised, or shipped [outcome].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Patents
+        Enable this section when you file patents, invention disclosures, provisional applications, or licensed IP.
+        Update: Add patent title, inventors, patent number if public, status, and year.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="patents" data-future-section="patents">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">IP</p>
+            <h2>Patents</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Status]</span>
+              <h3>[Patent / Invention Title]</h3>
+              <p>Inventors: [names]. Filed: [year].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Media Coverage
+        Enable this section when your work is covered by university news, magazines, podcasts, radio, newsletters, or public media.
+        Update: Add outlet, title, date, and link.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="media" data-future-section="media">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Media</p>
+            <h2>Media Coverage</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Outlet]</span>
+              <h3>[Story Title]</h3>
+              <p>[Date]. <a href="#">Read coverage</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Press Mentions
+        Enable this section when your work is mentioned by press, blogs, institutional reports, newsletters, or public-facing roundups.
+        Update: Add mention title, source, date, and context.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="press" data-future-section="press">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Press</p>
+            <h2>Press Mentions</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Source]</span>
+              <h3>[Mention Title]</h3>
+              <p>[Date]. Context: [why your work was mentioned].</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Research Blog
+        Enable this section when you start writing research explainers, paper notes, field updates, or dissertation reflections.
+        Update: Add title, date, summary, and link to the full post.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="research-blog" data-future-section="research-blog">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Research Blog</p>
+            <h2>Research Blog</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Date]</span>
+              <h3>[Research Post Title]</h3>
+              <p>Short summary of a research idea, paper, method, or result.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Technical Blog
+        Enable this section when you write engineering notes, reproducibility guides, tutorials, implementation details, or tool walkthroughs.
+        Update: Add title, date, technical area, and link.
+        Add entries: Copy one .future-card.
+      -->
+      <section class="section future-section" id="technical-blog" data-future-section="technical-blog">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Technical Blog</p>
+            <h2>Technical Blog</h2>
+          </div>
+          <div class="future-grid">
+            <article class="future-card">
+              <span>[Technology]</span>
+              <h3>[Technical Post Title]</h3>
+              <p>Short summary of an implementation, workflow, or technical lesson.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Testimonials
+        Enable this section when collaborators, advisors, students, clients, or project partners provide public recommendations.
+        Update: Add quote, name, role, affiliation, and permission status.
+        Add entries: Copy one .testimonial-card.
+      -->
+      <section class="section future-section" id="testimonials" data-future-section="testimonials">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">Testimonials</p>
+            <h2>Testimonials</h2>
+          </div>
+          <div class="future-grid">
+            <blockquote class="testimonial-card">
+              <p>"[Short public recommendation or collaborator quote.]"</p>
+              <cite>[Name], [Role / Affiliation]</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        FUTURE SECTION: Frequently Asked Questions
+        Enable this section when visitors frequently ask about collaboration, advising, supervision, speaking, consulting, data access, or internships.
+        Update: Add questions and concise answers.
+        Add entries: Copy one .faq-item.
+      -->
+      <section class="section future-section" id="faq" data-future-section="faq">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-kicker">FAQ</p>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Are you open to collaboration?</summary>
+              <p>Yes. Replace this with your preferred collaboration topics and contact process.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do you mentor students?</summary>
+              <p>Add mentoring availability, expectations, and project areas here.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </template>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-layout">
-      <p>&copy; <span data-year></span> Mudit Sharma. Early PhD profile.</p>
-      <a href="future-profile.html">Future full-profile version</a>
+      <p>&copy; <span data-year></span> Your Name. Last updated June 2026.</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 
