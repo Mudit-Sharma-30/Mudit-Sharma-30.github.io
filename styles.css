@@ -393,7 +393,7 @@ button {
   background:
     linear-gradient(90deg, rgba(12, 24, 22, 0.94) 0%, rgba(12, 24, 22, 0.78) 43%, rgba(12, 24, 22, 0.22) 100%),
     linear-gradient(180deg, rgba(12, 24, 22, 0.18) 0%, rgba(12, 24, 22, 0.82) 100%),
-    url("assets/research-workspace.png") center / cover;
+    url("assets/research/research-workspace.png") center / cover;
   transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.04);
   transition: transform 80ms linear;
 }
@@ -468,7 +468,7 @@ button {
   background:
     linear-gradient(90deg, rgba(12, 24, 22, 0.92), rgba(12, 24, 22, 0.7), rgba(12, 24, 22, 0.24)),
     linear-gradient(0deg, rgba(12, 24, 22, 0.75), rgba(12, 24, 22, 0.08)),
-    url("assets/research-workspace.png") center / cover;
+    url("assets/research/research-workspace.png") center / cover;
   transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.03);
 }
 
@@ -831,6 +831,38 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.theme-photo-frame {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--brand) 14%, transparent), transparent 42%),
+    var(--bg-elevated);
+}
+
+.theme-photo {
+  display: none;
+}
+
+[data-theme="auto"] .theme-photo-light,
+[data-theme="light"] .theme-photo-light {
+  display: block;
+}
+
+[data-theme="dark"] .theme-photo-dark {
+  display: block;
+  filter: contrast(1.05) brightness(1.05);
+}
+
+.portrait-frame .profile-photo-light-casual {
+  object-position: 16% 68%;
+  transform: scale(1.72);
+  transform-origin: 0% 70%;
+}
+
+.about-media .about-photo-light-real {
+  object-position: 50% 67%;
+  transform: scale(1.9);
+  transform-origin: 50% 67%;
 }
 
 .profile-card-body {
@@ -2666,7 +2698,7 @@ blockquote {
   background:
     linear-gradient(90deg, rgba(17, 24, 23, 0.9), rgba(17, 24, 23, 0.62), rgba(17, 24, 23, 0.18)),
     linear-gradient(0deg, rgba(17, 24, 23, 0.78), transparent 52%),
-    url("assets/research-workspace.png") center / cover;
+    url("assets/research/research-workspace.png") center / cover;
   transform: scale(1.03);
 }
 
@@ -3331,7 +3363,7 @@ blockquote {
   .early-hero-bg {
     background:
       linear-gradient(90deg, rgba(12, 24, 22, 0.94), rgba(12, 24, 22, 0.88)),
-      url("assets/research-workspace.png") center / cover;
+      url("assets/research/research-workspace.png") center / cover;
   }
 
   .quote-card {

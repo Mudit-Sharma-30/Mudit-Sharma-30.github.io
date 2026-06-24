@@ -16,7 +16,7 @@ This is a static academic/professional personal website.
 ## Personalize
 
 - Replace `Your Name`, `YN`, department, university, advisor, location, and email.
-- Replace `assets/profile-photo.svg` with your professional photo.
+- Keep active portraits in `assets/profile/`; the homepage currently uses separate light- and dark-theme images.
 - Update social links, publication entries, coursework, teaching assistant timeline, collaborators, and contact details.
 - Edit the random quotes in `index.html` inside the `data-quotes` attribute.
 - Add detailed research interest notes and active directions in `research-interests.html`.
