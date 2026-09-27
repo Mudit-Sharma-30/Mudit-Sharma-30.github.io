@@ -2343,6 +2343,26 @@ blockquote {
   font-weight: 850;
 }
 
+.collaborator-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.9rem;
+  margin-top: 0.7rem;
+}
+
+.collaborator-links a {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-decoration-color: color-mix(in srgb, var(--brand) 55%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+.collaborator-links a:hover,
+.collaborator-links a:focus-visible {
+  color: var(--brand-strong);
+}
+
 .group-card {
   padding: 1.25rem;
 }
