@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detailed research interest page for Your Name, covering multi-armed bandits, dueling bandits, online learning, preference learning, learning theory, and active directions.">
-  <meta name="author" content="Your Name">
-  <meta property="og:title" content="Research Interest | Your Name">
-  <meta property="og:description" content="A detailed, accessible explanation of bandits, online learning, preference learning, and active research directions.">
+  <meta name="description" content="Detailed research interest page for Mudit Sharma, covering multi-armed bandits, dueling bandits, online learning, preference feedback, nonconvex optimization, and continuous action spaces.">
+  <meta name="author" content="Mudit Sharma">
+  <meta property="og:title" content="Research Interest | Mudit Sharma">
+  <meta property="og:description" content="A detailed, accessible explanation of bandits, online learning, nonconvex optimization, continuous action spaces, and active research directions.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/research/research-workspace.png">
-  <title>Research Interest | Your Name</title>
+  <title>Research Interest | Mudit Sharma</title>
   <link rel="preload" href="assets/research/research-workspace.png" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,9 +20,9 @@
   <header class="site-header" data-header>
     <nav class="nav shell" aria-label="Research page navigation">
       <a class="brand" href="index.html#top" aria-label="Go to homepage">
-        <span class="brand-mark">YN</span>
+        <img class="brand-avatar" src="assets/profile/coding-researcher-avatar.png" alt="Researcher wearing glasses and coding">
         <span class="brand-copy">
-          <strong>Your Name</strong>
+          <strong>Mudit Sharma</strong>
           <small>Research notes</small>
         </span>
       </a>
@@ -72,19 +72,19 @@
       <div class="shell research-detail-layout">
         <div class="hero-copy reveal">
           <p class="eyebrow">Research Details</p>
-          <h1>Bandits, preferences, and learning while decisions are already happening.</h1>
+          <h1>Bandits, preferences, and nonconvex optimization.</h1>
           <p class="hero-summary">
             This page explains the ideas behind Multi-Armed Bandits, Dueling
-            Bandits, Online Learning, Preference Learning, and Learning Theory,
-            then connects them to the active research directions you can update
-            over time.
+            Bandits, Online Learning, Preference Learning, Nonconvex Optimization,
+            and continuous action spaces, then connects them to my active
+            research directions.
           </p>
           <div class="keyword-row" aria-label="Research keywords">
             <span>Explore</span>
             <span>Compare</span>
             <span>Adapt</span>
+            <span>Optimize</span>
             <span>Prove</span>
-            <span>Repeat gently</span>
           </div>
           <div class="hero-actions">
             <a class="button primary" href="mab-game.html">Play MAB Game</a>
@@ -93,7 +93,7 @@
         </div>
 
         <aside class="research-compass reveal" aria-label="Research compass graphic">
-          <svg viewBox="0 0 420 420" role="img" aria-label="Research compass connecting bandits, preferences, online learning, and theory">
+          <svg viewBox="0 0 420 420" role="img" aria-label="Research compass connecting bandits, preferences, online learning, nonconvex optimization, and theory">
             <circle class="compass-ring" cx="210" cy="210" r="155"></circle>
             <circle class="compass-ring soft" cx="210" cy="210" r="96"></circle>
             <line x1="210" y1="55" x2="210" y2="365"></line>
@@ -102,7 +102,7 @@
             <g class="compass-node center"><circle cx="210" cy="210" r="42"></circle><text x="210" y="205" text-anchor="middle">Sequential</text><text x="210" y="224" text-anchor="middle">Decisions</text></g>
             <g class="compass-node"><circle cx="210" cy="56" r="34"></circle><text x="210" y="52" text-anchor="middle">Learning</text><text x="210" y="70" text-anchor="middle">Theory</text></g>
             <g class="compass-node"><circle cx="365" cy="210" r="36"></circle><text x="365" y="206" text-anchor="middle">Online</text><text x="365" y="224" text-anchor="middle">Learning</text></g>
-            <g class="compass-node"><circle cx="210" cy="365" r="38"></circle><text x="210" y="361" text-anchor="middle">Preference</text><text x="210" y="379" text-anchor="middle">Learning</text></g>
+            <g class="compass-node"><circle cx="210" cy="365" r="38"></circle><text x="210" y="361" text-anchor="middle">Nonconvex</text><text x="210" y="379" text-anchor="middle">Optimization</text></g>
             <g class="compass-node"><circle cx="55" cy="210" r="36"></circle><text x="55" y="206" text-anchor="middle">Bandit</text><text x="55" y="224" text-anchor="middle">Feedback</text></g>
           </svg>
         </aside>
@@ -115,9 +115,9 @@
           <p class="section-kicker">Research Interest</p>
           <h2>Active directions I am shaping into research questions.</h2>
           <p>
-            This section is intentionally more detailed than the homepage. Use it
-            for the ideas you are currently reading, testing, proving, discussing,
-            or preparing to turn into archived drafts and future manuscripts.
+            My research centers on algorithms for learning and decision-making
+            under uncertainty, especially where feedback is partial, comparative,
+            or tied to large continuous action spaces.
           </p>
         </div>
 
@@ -166,6 +166,20 @@
             </ul>
           </article>
           <article class="early-work-card reveal">
+            <span class="status-pill">Optimization</span>
+            <h3>Optimization in nonconvex action spaces</h3>
+            <p>
+              Study sequential learning problems where actions live in continuous,
+              nonconvex spaces and the learner must search efficiently despite
+              local optima, noisy feedback, and limited samples.
+            </p>
+            <ul class="meta-list">
+              <li>Questions: How can algorithms explore continuous actions without wasting samples?</li>
+              <li>Methods: Lipschitz structure, stochastic optimization, elimination, and adaptive discretization</li>
+              <li>Connection: Continuous-action dueling bandits and regret-minimizing decision rules</li>
+            </ul>
+          </article>
+          <article class="early-work-card reveal">
             <span class="status-pill">Human signal</span>
             <h3>Preference Learning from rankings, clicks, and choices</h3>
             <p>
@@ -204,7 +218,7 @@
             <ul class="meta-list">
               <li>Questions: Which baselines, metrics, and plots make the idea clear?</li>
               <li>Artifacts: notebooks, experiment logs, literature tables, draft PDFs</li>
-              <li>Reminder: if future-you cannot reproduce it, future-you will object politely</li>
+              <li>Reminder: if an experiment cannot be reproduced, the theorem notes should complain early</li>
             </ul>
           </article>
         </div>
@@ -265,6 +279,17 @@
 
           <article class="research-detail-card reveal">
             <span class="status-pill">05</span>
+            <h3>Nonconvex Optimization in Action Spaces</h3>
+            <p>
+              In continuous-action problems, the learner may search over a
+              landscape with several local optima. Nonconvex optimization asks
+              how to make useful progress without assuming the reward or
+              preference surface is simple.
+            </p>
+          </article>
+
+          <article class="research-detail-card reveal">
+            <span class="status-pill">06</span>
             <h3>Learning Theory</h3>
             <p>
               Learning theory gives the mathematical language for asking when an
@@ -274,12 +299,13 @@
           </article>
 
           <article class="research-detail-card reveal">
-            <span class="status-pill">06</span>
+            <span class="status-pill">07</span>
             <h3>Why They Fit Together</h3>
             <p>
               Bandits define the feedback structure, online learning defines the
-              sequential setting, preference learning defines the signal, and
-              learning theory helps explain what can be guaranteed.
+              sequential setting, preference learning defines the signal,
+              nonconvex optimization shapes the action search, and learning
+              theory helps explain what can be guaranteed.
             </p>
           </article>
         </div>
@@ -293,7 +319,8 @@
           <h2>The common pattern underneath the work.</h2>
           <p>
             Most projects on this page can be described as a loop: choose an
-            action, receive limited feedback, update a belief, and choose again.
+            action from a possibly nonconvex space, receive limited feedback,
+            update a belief, and choose again.
           </p>
         </div>
         <div class="decision-loop reveal" aria-label="Choose, observe, update, repeat loop">
@@ -315,7 +342,7 @@
 
   <footer class="site-footer">
     <div class="shell footer-layout">
-      <p>&copy; <span data-year></span> Your Name. Research interest page.</p>
+      <p>&copy; <span data-year></span> Mudit Sharma. Research interest page.</p>
       <a href="index.html#top">Back to homepage</a>
     </div>
   </footer>

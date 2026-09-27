@@ -833,6 +833,16 @@ h4 {
   object-fit: cover;
 }
 
+.brand-avatar {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 2px solid color-mix(in srgb, var(--amber) 55%, transparent);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(23, 35, 63, 0.2);
+}
+
 .theme-photo-frame {
   background:
     linear-gradient(135deg, color-mix(in srgb, var(--brand) 14%, transparent), transparent 42%),
@@ -1179,10 +1189,16 @@ blockquote {
 .bandit-svg text,
 .explore-svg text,
 .duel-svg text,
-.network-svg text {
+.network-svg text,
+.landscape-svg text {
   fill: var(--muted);
   font-size: 12px;
   font-weight: 800;
+}
+
+.impact-grid-compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 760px;
 }
 
 .machine-body {
@@ -1281,6 +1297,45 @@ blockquote {
 
 .balance-percent {
   fill: var(--brand-strong) !important;
+}
+
+.landscape-fill {
+  fill: color-mix(in srgb, var(--brand) 16%, transparent);
+}
+
+.landscape-line {
+  fill: none;
+  stroke: var(--brand);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.landscape-axis {
+  stroke: var(--line-strong);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.candidate-points circle {
+  fill: var(--bg-elevated);
+  stroke: var(--blue);
+  stroke-width: 4;
+}
+
+.candidate-points .best-point {
+  fill: var(--amber);
+  stroke: var(--bg-elevated);
+  filter: drop-shadow(0 8px 12px rgba(17, 24, 23, 0.16));
+}
+
+.search-path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-dasharray: 8 9;
+  stroke-linecap: round;
+  stroke-width: 3;
+  animation: dash-flow 8s linear infinite;
 }
 
 .explore-control {
@@ -1428,6 +1483,13 @@ blockquote {
 
 .research-detail-hero .hero-bg {
   opacity: 0.78;
+}
+
+.research-detail-hero h1 {
+  max-width: 880px;
+  color: #fff;
+  font-size: clamp(2.8rem, 7vw, 6.4rem);
+  line-height: 0.96;
 }
 
 .research-compass {
@@ -2142,6 +2204,7 @@ blockquote {
 
 .publication {
   display: grid;
+  scroll-margin-top: 110px;
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 1rem;
   padding: 1.1rem;
@@ -2240,6 +2303,25 @@ blockquote {
   gap: 1rem;
   align-items: center;
   padding: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-body {
+  display: block;
+  min-width: 0;
+}
+
+.group-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.group-card span {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: var(--brand-strong);
+  font-weight: 850;
 }
 
 .collaborator-card img {
@@ -2734,6 +2816,12 @@ blockquote {
   background: var(--bg-elevated);
   box-shadow: var(--shadow-soft);
   transition: transform var(--fast), box-shadow var(--fast), border-color var(--fast);
+  cursor: zoom-in;
+}
+
+.gallery-item:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 4px;
 }
 
 .gallery-item:first-child {
@@ -2761,6 +2849,71 @@ blockquote {
   background: rgba(17, 24, 23, 0.72);
   border-radius: var(--radius);
   font-weight: 900;
+}
+
+.gallery-lightbox {
+  width: min(94vw, 1500px);
+  max-width: none;
+  height: min(92vh, 1050px);
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius);
+  background: #101817;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.48);
+}
+
+.gallery-lightbox::backdrop {
+  background: rgba(5, 10, 10, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.gallery-lightbox figure {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: minmax(0, 1fr) auto;
+  margin: 0;
+}
+
+.gallery-lightbox img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.gallery-lightbox figcaption {
+  padding: 0.85rem 4rem 0.9rem 1rem;
+  color: rgba(255, 255, 255, 0.86);
+  background: #101817;
+  font-weight: 850;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 2;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: rgba(8, 15, 14, 0.78);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-lightbox-close:hover,
+.gallery-lightbox-close:focus-visible {
+  background: var(--brand);
 }
 
 .gallery-placeholder {

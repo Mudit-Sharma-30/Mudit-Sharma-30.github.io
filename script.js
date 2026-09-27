@@ -12,7 +12,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
 const navMoreMenus = document.querySelectorAll(".nav-more");
 const themeToggle = document.querySelector("[data-theme-toggle]");
-const yearSlot = document.querySelector("[data-year]");
+const yearSlot = document.querySelector(".site-footer [data-year]");
 const emailLink = document.querySelector("[data-email]");
 const copyEmailButton = document.querySelector("[data-copy-email]");
 const parallaxTarget = document.querySelector("[data-parallax]");
@@ -327,7 +327,7 @@ if (typingElement && !prefersReducedMotion) {
 const publicationButtons = document.querySelectorAll("[data-publication-filter]");
 const publicationYearButtons = document.querySelectorAll("[data-year-filter]");
 const publications = document.querySelectorAll(".publication[data-status]");
-let activePublicationStatus = "all";
+let activePublicationStatus = "accepted";
 let activePublicationYear = "all";
 
 const applyPublicationFilters = () => {
@@ -337,6 +337,8 @@ const applyPublicationFilters = () => {
     publication.classList.toggle("is-hidden", !(matchesStatus && matchesYear));
   });
 };
+
+applyPublicationFilters();
 
 publicationButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -371,6 +373,54 @@ galleryButtons.forEach((button) => {
       item.classList.toggle("is-hidden", !shouldShow);
     });
   });
+});
+
+const galleryLightbox = document.querySelector("[data-gallery-lightbox]");
+const galleryLightboxImage = document.querySelector("[data-gallery-lightbox-image]");
+const galleryLightboxCaption = document.querySelector("[data-gallery-lightbox-caption]");
+const galleryLightboxClose = document.querySelector("[data-gallery-lightbox-close]");
+
+document.querySelectorAll(".gallery-item img").forEach((galleryImage) => {
+  const galleryItem = galleryImage.closest(".gallery-item");
+
+  if (!galleryItem || !(galleryLightbox instanceof HTMLDialogElement)) {
+    return;
+  }
+
+  galleryItem.tabIndex = 0;
+  galleryItem.setAttribute("role", "button");
+  galleryItem.setAttribute("aria-label", `Enlarge ${galleryImage.alt || "gallery image"}`);
+
+  const openGalleryImage = () => {
+    if (!(galleryLightboxImage instanceof HTMLImageElement)) {
+      return;
+    }
+
+    const caption = galleryItem.querySelector("figcaption")?.textContent?.trim() || galleryImage.alt;
+    galleryLightboxImage.src = galleryImage.currentSrc || galleryImage.src;
+    galleryLightboxImage.alt = galleryImage.alt;
+
+    if (galleryLightboxCaption) {
+      galleryLightboxCaption.textContent = caption;
+    }
+
+    galleryLightbox.showModal();
+  };
+
+  galleryItem.addEventListener("click", openGalleryImage);
+  galleryItem.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openGalleryImage();
+    }
+  });
+});
+
+galleryLightboxClose?.addEventListener("click", () => galleryLightbox?.close());
+galleryLightbox?.addEventListener("click", (event) => {
+  if (event.target === galleryLightbox) {
+    galleryLightbox.close();
+  }
 });
 
 document.querySelectorAll("[data-explore-card]").forEach((card) => {
