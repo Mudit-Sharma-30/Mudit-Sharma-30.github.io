@@ -12,6 +12,7 @@
   <title>Gallery | Mudit Sharma</title>
   <link rel="preload" href="assets/research/research-workspace.png" as="image">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="minimal.css">
 </head>
 <body class="gallery-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -65,7 +66,7 @@
     <!--
       PAGE: Gallery
       Purpose: Keep visual/personal material on its own page so the homepage remains focused.
-      Update: Replace placeholder tiles with real photos, captions, dates, and locations.
+      Update: Replace placeholder tiles with real photos and descriptive alt text.
       Add entries: Copy one .gallery-item and set data-gallery to conferences, research, travel, personal, or lab.
     -->
     <section class="gallery-hero" id="top" aria-label="Gallery introduction">
@@ -73,11 +74,8 @@
       <div class="shell gallery-hero-layout">
         <div class="reveal">
           <p class="eyebrow">Gallery</p>
-          <h1>Research life, field notes, travel, and moments beyond the desk.</h1>
-          <p>
-            A visual companion to the academic profile: research activities,
-            travel, campus life, and personal interests.
-          </p>
+          <h1>Life beyond the desk.</h1>
+          <p>Research, travel, campus, and the moments between.</p>
           <div class="hero-actions">
             <a class="button primary" href="#gallery">Browse Gallery</a>
             <a class="button secondary" href="index.html">Back Home</a>
@@ -91,10 +89,7 @@
         <div class="section-heading reveal">
           <p class="section-kicker">Categories</p>
           <h2>Browse by context.</h2>
-          <p>
-            A small, growing set of visuals connected to research, travel,
-            conferences, and the human side of doing a PhD.
-          </p>
+          <p>Research, travel, lab events, and personal interests.</p>
         </div>
 
         <div class="filter-bar reveal" role="group" aria-label="Gallery filters">
@@ -108,26 +103,23 @@
         <div class="gallery-grid gallery-page-grid">
           <figure class="gallery-item reveal" data-gallery="research">
             <img src="assets/research/research-workspace.png" alt="Research workspace with papers and a laptop" loading="lazy">
-            <figcaption>Research workspace</figcaption>
           </figure>
           <figure class="gallery-item reveal" data-gallery="travel">
             <img src="assets/travel/IMG_5449.JPG" alt="Mudit Sharma during travel in the hills" loading="lazy">
-            <figcaption>At Dharamshala</figcaption>
           </figure>
           <figure class="gallery-item reveal" data-gallery="travel">
             <img src="assets/travel/20241031_141653.jpg" alt="Mudit Sharma in an outdoor green space" loading="lazy">
-            <figcaption>Open-air reset</figcaption>
           </figure>
-          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20240920-WA0056.jpg" alt="GTML Lab event at IIT Ropar" loading="lazy"><figcaption>GTML Lab</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20250308-WA0015.jpg" alt="Research group gathering at IIT Ropar" loading="lazy"><figcaption>@Syntacs 2025</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20250411-WA0018.jpg" alt="Lab activity with colleagues" loading="lazy"><figcaption>GTML Lab</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20250411-WA0088.jpg" alt="IIT Ropar lab event" loading="lazy"><figcaption>GTML Lab</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20260206-WA0023.jpg" alt="Recent GTML Lab gathering" loading="lazy"><figcaption>GTML Lab @Advitiya</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/Photography/PXL_20241218_173350452.jpg" alt="Creative photography by Mudit Sharma" loading="lazy"><figcaption>Photography</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/Photography/PXL_20241218_173554877.jpg" alt="Evening photography by Mudit Sharma" loading="lazy"><figcaption>Through my lens</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/sports/20251219_161358.jpg" alt="Sports moment" loading="lazy"><figcaption>@Mahabalipuram with Basketball team</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/sports/IMG_2164.JPG" alt="Playing sports with teammates" loading="lazy"><figcaption>On the court</figcaption></figure>
-          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/sports/IMG_2180~2.jpg" alt="Team sports event" loading="lazy"><figcaption>Taking the shot</figcaption></figure>
+          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20240920-WA0056.jpg" alt="GTML Lab event at IIT Ropar" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20250308-WA0015.jpg" alt="Research group gathering at IIT Ropar" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20250411-WA0018.jpg" alt="Lab activity with colleagues" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20250411-WA0088.jpg" alt="IIT Ropar lab event" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="lab"><img src="assets/lab/IMG-20260206-WA0023.jpg" alt="Recent GTML Lab gathering" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/Photography/PXL_20241218_173350452.jpg" alt="Creative photography by Mudit Sharma" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/Photography/PXL_20241218_173554877.jpg" alt="Evening photography by Mudit Sharma" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/sports/20251219_161358.jpg" alt="Basketball team at Mahabalipuram" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/sports/IMG_2164.JPG" alt="Playing sports with teammates" loading="lazy"></figure>
+          <figure class="gallery-item reveal" data-gallery="personal"><img src="assets/sports/IMG_2180~2.jpg" alt="Team sports event" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -137,7 +129,6 @@
     <button class="gallery-lightbox-close" type="button" data-gallery-lightbox-close aria-label="Close expanded image">&times;</button>
     <figure>
       <img src="" alt="" data-gallery-lightbox-image>
-      <figcaption data-gallery-lightbox-caption></figcaption>
     </figure>
   </dialog>
 

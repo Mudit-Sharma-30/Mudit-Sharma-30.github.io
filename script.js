@@ -325,16 +325,13 @@ if (typingElement && !prefersReducedMotion) {
 }
 
 const publicationButtons = document.querySelectorAll("[data-publication-filter]");
-const publicationYearButtons = document.querySelectorAll("[data-year-filter]");
 const publications = document.querySelectorAll(".publication[data-status]");
 let activePublicationStatus = "accepted";
-let activePublicationYear = "all";
 
 const applyPublicationFilters = () => {
   publications.forEach((publication) => {
     const matchesStatus = activePublicationStatus === "all" || publication.dataset.status === activePublicationStatus;
-    const matchesYear = activePublicationYear === "all" || publication.dataset.year === activePublicationYear;
-    publication.classList.toggle("is-hidden", !(matchesStatus && matchesYear));
+    publication.classList.toggle("is-hidden", !matchesStatus);
   });
 };
 
@@ -344,15 +341,6 @@ publicationButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activePublicationStatus = button.dataset.publicationFilter || "all";
     publicationButtons.forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    applyPublicationFilters();
-  });
-});
-
-publicationYearButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    activePublicationYear = button.dataset.yearFilter || "all";
-    publicationYearButtons.forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
     applyPublicationFilters();
   });
@@ -377,7 +365,6 @@ galleryButtons.forEach((button) => {
 
 const galleryLightbox = document.querySelector("[data-gallery-lightbox]");
 const galleryLightboxImage = document.querySelector("[data-gallery-lightbox-image]");
-const galleryLightboxCaption = document.querySelector("[data-gallery-lightbox-caption]");
 const galleryLightboxClose = document.querySelector("[data-gallery-lightbox-close]");
 
 document.querySelectorAll(".gallery-item img").forEach((galleryImage) => {
@@ -396,13 +383,8 @@ document.querySelectorAll(".gallery-item img").forEach((galleryImage) => {
       return;
     }
 
-    const caption = galleryItem.querySelector("figcaption")?.textContent?.trim() || galleryImage.alt;
     galleryLightboxImage.src = galleryImage.currentSrc || galleryImage.src;
     galleryLightboxImage.alt = galleryImage.alt;
-
-    if (galleryLightboxCaption) {
-      galleryLightboxCaption.textContent = caption;
-    }
 
     galleryLightbox.showModal();
   };
@@ -412,6 +394,26 @@ document.querySelectorAll(".gallery-item img").forEach((galleryImage) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       openGalleryImage();
+    }
+  });
+});
+
+document.querySelectorAll("[data-shared-papers-open]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialogKey = button.dataset.sharedPapersOpen;
+    const dialog = document.querySelector(`[data-shared-papers-dialog="${dialogKey}"]`);
+
+    if (dialog instanceof HTMLDialogElement) {
+      dialog.showModal();
+    }
+  });
+});
+
+document.querySelectorAll("[data-shared-papers-dialog]").forEach((dialog) => {
+  dialog.querySelector("[data-shared-papers-close]")?.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
     }
   });
 });
